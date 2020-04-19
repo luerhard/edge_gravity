@@ -1,8 +1,16 @@
 from distutils.core import Extension, setup
-from Cython.Build import cythonize
+from pathlib import Path
 
+USE_CYTHON = "auto"
 
-USE_CYTHON = True
+if USE_CYTHON:
+    try:
+        from Cython.Build import cythonize
+    except ImportError:
+        if USE_CYTHON=='auto':
+            USE_CYTHON=False
+        else:
+            raise
 
 ext = '.pyx' if USE_CYTHON else '.c'
 
@@ -17,6 +25,9 @@ setup(
     author_email="luerhard@googlemail.com",
     include_package_data=True,
     description="Calculates Edge Gravity for a given networkx DiGraph",
+    license="MIT",
+    keywords="edge gravity network networkx graph edgegravity",
+    long_description=Path("README.md").read_text(),
     packages=["edge_gravity"],
     ext_modules=cythonize(extensions)
 )
