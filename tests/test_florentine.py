@@ -1,8 +1,10 @@
 import networkx as nx
 from edge_gravity import edge_gravity
+import pytest
 
 
-def test_florentine_k_15():
+@pytest.fixture
+def florentine_network():
     florentine_family = nx.generators.social.florentine_families_graph()
 
     new_g = nx.DiGraph()
@@ -15,7 +17,12 @@ def test_florentine_k_15():
 
     florentine_family = new_g
 
-    kstar_found, results = edge_gravity(florentine_family, k=15)
+    return florentine_family
+
+
+def test_florentine_k_15(florentine_network):
+
+    kstar_found, results = edge_gravity(florentine_network, k=15)
     results = results.most_common(40)
 
     assert kstar_found == False
@@ -64,3 +71,17 @@ def test_florentine_k_15():
     ])
 
     assert set(results) == exp_results
+
+
+def test_find_correct_k(florentine_network):
+    # correct k according to Paper is 33
+
+    k_star, _ = edge_gravity(florentine_network, k=32)
+    assert k_star is False
+
+    # kstar only is known if kstar + 1 is calculated
+    k_star, _ = edge_gravity(florentine_network, k=33)
+    assert k_star is False
+
+    k_star, _ = edge_gravity(florentine_network, k=34)
+    assert k_star == 33

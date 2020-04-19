@@ -26,6 +26,18 @@ cdef is_subsequence(tuple subseq, tuple seq):
     else:
         return False
 
+def chunks(iterable, chunksize):
+        iterable = iter(iterable)
+        temp = [next(iterable)]
+
+        for item in iterable:
+            if not len(temp) % chunksize:
+                yield temp
+                temp = []
+            temp.append(item)
+
+        yield temp
+
 def worker(args):
     """
     does the heavy lifting - every process gets a worker and every worker a subset of#
@@ -87,22 +99,16 @@ def edge_gravity(g, k=None, weight=None):
 
     weight: gets passed to networkx.shortest_simple_paths - for a detailed description
         see the docstring of this function.
+
+    Returns
+    ----------
+    A 2-tuple where 
+        the first element is either kstar or False if kstar is not known
+        the second element is a collections.Counter object with edges as keys and the number of paths as values
     """
 
     if k == None:
         k = 999_999
-
-    def chunks(iterable, chunksize):
-        iterable = iter(iterable)
-        temp = [next(iterable)]
-
-        for item in iterable:
-            if not len(temp) % chunksize:
-                yield temp
-                temp = []
-            temp.append(item)
-
-        yield temp
 
     with ProcessPoolExecutor(max_workers=cpu_count()) as exe:
 
@@ -125,10 +131,8 @@ def edge_gravity(g, k=None, weight=None):
             gravity_result += r
 
         if max(k_result.values()) >= k:
-            kstar_found = False
-            print(f"k* not found !, must be larger than or equal to {k}")
+            kstar = False
         else:
-            kstar_found = True
-            print(f"k* found !, is exactly {max(k_result.values())}")
+            kstar = max(k_result.values())
 
-    return kstar_found, gravity_result
+    return kstar, gravity_result

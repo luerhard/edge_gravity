@@ -1,4 +1,5 @@
-from distutils.core import Extension, setup
+from setuptools import setup
+from setuptools.extension import Extension
 from pathlib import Path
 
 USE_CYTHON = "auto"
@@ -7,18 +8,18 @@ if USE_CYTHON:
     try:
         from Cython.Build import cythonize
     except ImportError:
-        if USE_CYTHON=='auto':
-            USE_CYTHON=False
+        if USE_CYTHON == 'auto':
+            USE_CYTHON = False
         else:
             raise
 
 ext = '.pyx' if USE_CYTHON else '.c'
 
-extensions = [Extension(name="edge_gravity.edge_gravity",
-                       sources=["edge_gravity/edge_gravity" + ext])]
+extension = Extension(name="edge_gravity.edge_gravity",
+                      sources=["edge_gravity/edge_gravity" + ext])
 
 if USE_CYTHON:
-    extensions = [cythonize(ext) for ext in extensions]
+    extensions = cythonize(extension)
 
 setup(
     name="edge_gravity",
@@ -31,5 +32,6 @@ setup(
     keywords="edge gravity network networkx graph edgegravity",
     long_description=Path("README.md").read_text(),
     packages=["edge_gravity"],
+    install_requires=["networkx"],
     ext_modules=extensions
 )
