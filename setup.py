@@ -14,9 +14,11 @@ if USE_CYTHON:
 
 ext = '.pyx' if USE_CYTHON else '.c'
 
-# define an extension that will be cythonized and compiled
-extensions = Extension(name="edge_gravity.edge_gravity",
-                       sources=["edge_gravity/edge_gravity" + ext])
+extensions = [Extension(name="edge_gravity.edge_gravity",
+                       sources=["edge_gravity/edge_gravity" + ext])]
+
+if USE_CYTHON:
+    extensions = [cythonize(ext) for ext in extensions]
 
 setup(
     name="edge_gravity",
@@ -29,5 +31,5 @@ setup(
     keywords="edge gravity network networkx graph edgegravity",
     long_description=Path("README.md").read_text(),
     packages=["edge_gravity"],
-    ext_modules=cythonize(extensions)
+    ext_modules=extensions
 )
