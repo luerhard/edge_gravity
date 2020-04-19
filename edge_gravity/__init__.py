@@ -1,1 +1,1 @@
-from .edge_gravity import edge_gravity
+from edge_gravity.edge_gravity import edge_gravity

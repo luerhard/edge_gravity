@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "edge_gravity",
+        "name": "edge_gravity.edge_gravity",
         "sources": [
             "edge_gravity/edge_gravity.pyx"
         ]
     },
-    "module_name": "edge_gravity"
+    "module_name": "edge_gravity.edge_gravity"
 }
 END: Cython Metadata */
 
@@ -604,8 +604,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__edge_gravity
-#define __PYX_HAVE_API__edge_gravity
+#define __PYX_HAVE__edge_gravity__edge_gravity
+#define __PYX_HAVE_API__edge_gravity__edge_gravity
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -819,17 +819,17 @@ static const char *__pyx_f[] = {
 };
 
 /*--- Type declarations ---*/
-struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths;
-struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks;
+struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths;
+struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks;
 
-/* "edge_gravity.pyx":42
+/* "edge_gravity/edge_gravity.pyx":42
  *     l = defaultdict(int)
  * 
  *     def get_shortest_paths(g, list nodelist, int k, weight):             # <<<<<<<<<<<<<<
  * 
  *         cdef tuple nodes = tuple(g.nodes())
  */
-struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths {
+struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths {
   PyObject_HEAD
   PyObject *__pyx_v_g;
   int __pyx_v_k;
@@ -852,14 +852,14 @@ struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths {
 };
 
 
-/* "edge_gravity.pyx":95
+/* "edge_gravity/edge_gravity.pyx":95
  *         k = 999_999
  * 
  *     def chunks(iterable, chunksize):             # <<<<<<<<<<<<<<
  *         iterable = iter(iterable)
  *         temp = [next(iterable)]
  */
-struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks {
+struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks {
   PyObject_HEAD
   PyObject *__pyx_v_chunksize;
   PyObject *__pyx_v_item;
@@ -1398,6 +1398,12 @@ static void __pyx_insert_code_object(int code_line, PyCodeObject* code_object);
 static void __Pyx_AddTraceback(const char *funcname, int c_line,
                                int py_line, const char *filename);
 
+/* CIntToPy.proto */
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
+
+/* CIntToPy.proto */
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
+
 /* Print.proto */
 static int __Pyx_Print(PyObject*, PyObject *, int);
 #if CYTHON_COMPILING_IN_PYPY || PY_MAJOR_VERSION >= 3
@@ -1405,20 +1411,14 @@ static PyObject* __pyx_print = 0;
 static PyObject* __pyx_print_kwargs = 0;
 #endif
 
-/* CIntToPy.proto */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
-
-/* CIntToPy.proto */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
-
-/* PrintOne.proto */
-static int __Pyx_PrintOne(PyObject* stream, PyObject *o);
-
 /* CIntFromPy.proto */
 static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
 
 /* CIntFromPy.proto */
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
+
+/* PrintOne.proto */
+static int __Pyx_PrintOne(PyObject* stream, PyObject *o);
 
 /* RaiseException.proto */
 static void __Pyx_Raise(PyObject *type, PyObject *value, PyObject *tb, PyObject *cause);
@@ -1521,15 +1521,15 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'edge_gravity' */
-static PyTypeObject *__pyx_ptype_12edge_gravity___pyx_scope_struct__get_shortest_paths = 0;
-static PyTypeObject *__pyx_ptype_12edge_gravity___pyx_scope_struct_1_chunks = 0;
-static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *, PyObject *); /*proto*/
-#define __Pyx_MODULE_NAME "edge_gravity"
-extern int __pyx_module_is_main_edge_gravity;
-int __pyx_module_is_main_edge_gravity = 0;
+/* Module declarations from 'edge_gravity.edge_gravity' */
+static PyTypeObject *__pyx_ptype_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths = 0;
+static PyTypeObject *__pyx_ptype_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks = 0;
+static PyObject *__pyx_f_12edge_gravity_12edge_gravity_is_subsequence(PyObject *, PyObject *); /*proto*/
+#define __Pyx_MODULE_NAME "edge_gravity.edge_gravity"
+extern int __pyx_module_is_main_edge_gravity__edge_gravity;
+int __pyx_module_is_main_edge_gravity__edge_gravity = 0;
 
-/* Implementation of 'edge_gravity' */
+/* Implementation of 'edge_gravity.edge_gravity' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_zip;
 static PyObject *__pyx_builtin_max;
@@ -1553,7 +1553,6 @@ static const char __pyx_k_item[] = "item";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_math[] = "math";
 static const char __pyx_k_name[] = "__name__";
-static const char __pyx_k_node[] = "node";
 static const char __pyx_k_path[] = "path";
 static const char __pyx_k_send[] = "send";
 static const char __pyx_k_temp[] = "temp";
@@ -1562,7 +1561,6 @@ static const char __pyx_k_chunk[] = "chunk";
 static const char __pyx_k_close[] = "close";
 static const char __pyx_k_edges[] = "edges";
 static const char __pyx_k_enter[] = "__enter__";
-static const char __pyx_k_new_g[] = "new_g";
 static const char __pyx_k_nodes[] = "nodes";
 static const char __pyx_k_print[] = "print";
 static const char __pyx_k_range[] = "range";
@@ -1573,18 +1571,14 @@ static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_islice[] = "islice";
 static const char __pyx_k_random[] = "random";
 static const char __pyx_k_result[] = "result";
-static const char __pyx_k_social[] = "social";
 static const char __pyx_k_submit[] = "submit";
 static const char __pyx_k_values[] = "values";
 static const char __pyx_k_weight[] = "weight";
 static const char __pyx_k_worker[] = "worker";
 static const char __pyx_k_Counter[] = "Counter";
-static const char __pyx_k_DiGraph[] = "DiGraph";
 static const char __pyx_k_futures[] = "futures";
 static const char __pyx_k_results[] = "results";
 static const char __pyx_k_shuffle[] = "shuffle";
-static const char __pyx_k_add_edge[] = "add_edge";
-static const char __pyx_k_add_node[] = "add_node";
 static const char __pyx_k_iterable[] = "iterable";
 static const char __pyx_k_k_result[] = "k_result";
 static const char __pyx_k_networkx[] = "networkx";
@@ -1593,37 +1587,32 @@ static const char __pyx_k_chunksize[] = "chunksize";
 static const char __pyx_k_cpu_count[] = "cpu_count";
 static const char __pyx_k_itertools[] = "itertools";
 static const char __pyx_k_k_counter[] = "k_counter";
-static const char __pyx_k_generators[] = "generators";
 static const char __pyx_k_k_counters[] = "k_counters";
 static const char __pyx_k_tuple_path[] = "tuple_path";
 static const char __pyx_k_collections[] = "collections";
 static const char __pyx_k_defaultdict[] = "defaultdict";
+static const char __pyx_k_kstar_found[] = "kstar_found";
 static const char __pyx_k_max_workers[] = "max_workers";
-static const char __pyx_k_most_common[] = "most_common";
 static const char __pyx_k_edge_gravity[] = "edge_gravity";
 static const char __pyx_k_NetworkXNoPath[] = "NetworkXNoPath";
 static const char __pyx_k_gravity_result[] = "gravity_result";
 static const char __pyx_k_shortest_paths[] = "shortest_paths";
 static const char __pyx_k_multiprocessing[] = "multiprocessing";
 static const char __pyx_k_gravity_counters[] = "gravity_counters";
-static const char __pyx_k_florentine_family[] = "florentine_family";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_concurrent_futures[] = "concurrent.futures";
 static const char __pyx_k_get_shortest_paths[] = "get_shortest_paths";
 static const char __pyx_k_k_found_is_exactly[] = "k* found !, is exactly ";
 static const char __pyx_k_ProcessPoolExecutor[] = "ProcessPoolExecutor";
 static const char __pyx_k_shortest_simple_paths[] = "shortest_simple_paths";
-static const char __pyx_k_florentine_families_graph[] = "florentine_families_graph";
+static const char __pyx_k_edge_gravity_edge_gravity[] = "edge_gravity.edge_gravity";
 static const char __pyx_k_edge_gravity_locals_chunks[] = "edge_gravity.<locals>.chunks";
 static const char __pyx_k_edge_gravity_edge_gravity_pyx[] = "edge_gravity/edge_gravity.pyx";
 static const char __pyx_k_k_not_found_must_be_larger_than[] = "k* not found !, must be larger than or equal to ";
 static const char __pyx_k_worker_locals_get_shortest_paths[] = "worker.<locals>.get_shortest_paths";
 static PyObject *__pyx_n_s_Counter;
-static PyObject *__pyx_n_s_DiGraph;
 static PyObject *__pyx_n_s_NetworkXNoPath;
 static PyObject *__pyx_n_s_ProcessPoolExecutor;
-static PyObject *__pyx_n_s_add_edge;
-static PyObject *__pyx_n_s_add_node;
 static PyObject *__pyx_n_s_args;
 static PyObject *__pyx_n_s_ceil;
 static PyObject *__pyx_n_s_chunk;
@@ -1637,6 +1626,7 @@ static PyObject *__pyx_n_s_cpu_count;
 static PyObject *__pyx_n_s_defaultdict;
 static PyObject *__pyx_n_s_edge;
 static PyObject *__pyx_n_s_edge_gravity;
+static PyObject *__pyx_n_s_edge_gravity_edge_gravity;
 static PyObject *__pyx_kp_s_edge_gravity_edge_gravity_pyx;
 static PyObject *__pyx_n_s_edge_gravity_locals_chunks;
 static PyObject *__pyx_n_s_edges;
@@ -1645,12 +1635,9 @@ static PyObject *__pyx_n_s_enter;
 static PyObject *__pyx_n_s_exe;
 static PyObject *__pyx_n_s_exit;
 static PyObject *__pyx_n_s_file;
-static PyObject *__pyx_n_s_florentine_families_graph;
-static PyObject *__pyx_n_s_florentine_family;
 static PyObject *__pyx_n_s_future;
 static PyObject *__pyx_n_s_futures;
 static PyObject *__pyx_n_s_g;
-static PyObject *__pyx_n_s_generators;
 static PyObject *__pyx_n_s_get_shortest_paths;
 static PyObject *__pyx_n_s_gravity_counters;
 static PyObject *__pyx_n_s_gravity_result;
@@ -1665,17 +1652,15 @@ static PyObject *__pyx_n_s_k_counters;
 static PyObject *__pyx_kp_u_k_found_is_exactly;
 static PyObject *__pyx_kp_u_k_not_found_must_be_larger_than;
 static PyObject *__pyx_n_s_k_result;
+static PyObject *__pyx_n_s_kstar_found;
 static PyObject *__pyx_n_s_l;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_math;
 static PyObject *__pyx_n_s_max;
 static PyObject *__pyx_n_s_max_workers;
-static PyObject *__pyx_n_s_most_common;
 static PyObject *__pyx_n_s_multiprocessing;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_networkx;
-static PyObject *__pyx_n_s_new_g;
-static PyObject *__pyx_n_s_node;
 static PyObject *__pyx_n_s_nodelist;
 static PyObject *__pyx_n_s_nodes;
 static PyObject *__pyx_n_s_nx;
@@ -1690,7 +1675,6 @@ static PyObject *__pyx_n_s_send;
 static PyObject *__pyx_n_s_shortest_paths;
 static PyObject *__pyx_n_s_shortest_simple_paths;
 static PyObject *__pyx_n_s_shuffle;
-static PyObject *__pyx_n_s_social;
 static PyObject *__pyx_n_s_submit;
 static PyObject *__pyx_n_s_temp;
 static PyObject *__pyx_n_s_test;
@@ -1703,30 +1687,27 @@ static PyObject *__pyx_n_s_weight;
 static PyObject *__pyx_n_s_worker;
 static PyObject *__pyx_n_s_worker_locals_get_shortest_paths;
 static PyObject *__pyx_n_s_zip;
-static PyObject *__pyx_pf_12edge_gravity_6worker_get_shortest_paths(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_nodelist, int __pyx_v_k, PyObject *__pyx_v_weight); /* proto */
-static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_args); /* proto */
-static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_chunks(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_iterable, PyObject *__pyx_v_chunksize); /* proto */
-static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_k, PyObject *__pyx_v_weight); /* proto */
-static PyObject *__pyx_tp_new_12edge_gravity___pyx_scope_struct__get_shortest_paths(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_12edge_gravity___pyx_scope_struct_1_chunks(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_6worker_get_shortest_paths(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_nodelist, int __pyx_v_k, PyObject *__pyx_v_weight); /* proto */
+static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_args); /* proto */
+static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_12edge_gravity_chunks(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_iterable, PyObject *__pyx_v_chunksize); /* proto */
+static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_k, PyObject *__pyx_v_weight); /* proto */
+static PyObject *__pyx_tp_new_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_float__3;
 static PyObject *__pyx_int_1;
-static PyObject *__pyx_int_15;
-static PyObject *__pyx_int_40;
 static PyObject *__pyx_int_999999;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_tuple__6;
 static PyObject *__pyx_tuple__8;
-static PyObject *__pyx_tuple__10;
 static PyObject *__pyx_codeobj__2;
 static PyObject *__pyx_codeobj__4;
 static PyObject *__pyx_codeobj__7;
 static PyObject *__pyx_codeobj__9;
 /* Late includes */
 
-/* "edge_gravity.pyx":14
+/* "edge_gravity/edge_gravity.pyx":14
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cdef is_subsequence(tuple subseq, tuple seq):             # <<<<<<<<<<<<<<
@@ -1734,7 +1715,7 @@ static PyObject *__pyx_codeobj__9;
  *     cdef int len_subseq, len_seq, start, end
  */
 
-static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq, PyObject *__pyx_v_seq) {
+static PyObject *__pyx_f_12edge_gravity_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq, PyObject *__pyx_v_seq) {
   int __pyx_v_len_subseq;
   int __pyx_v_len_seq;
   int __pyx_v_start;
@@ -1751,7 +1732,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("is_subsequence", 0);
 
-  /* "edge_gravity.pyx":17
+  /* "edge_gravity/edge_gravity.pyx":17
  *     """used to check if an edge is present in a path"""
  *     cdef int len_subseq, len_seq, start, end
  *     len_subseq = 2             # <<<<<<<<<<<<<<
@@ -1760,7 +1741,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
  */
   __pyx_v_len_subseq = 2;
 
-  /* "edge_gravity.pyx":18
+  /* "edge_gravity/edge_gravity.pyx":18
  *     cdef int len_subseq, len_seq, start, end
  *     len_subseq = 2
  *     len_seq = len(seq)             # <<<<<<<<<<<<<<
@@ -1774,7 +1755,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
   __pyx_t_1 = PyTuple_GET_SIZE(__pyx_v_seq); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 18, __pyx_L1_error)
   __pyx_v_len_seq = __pyx_t_1;
 
-  /* "edge_gravity.pyx":19
+  /* "edge_gravity/edge_gravity.pyx":19
  *     len_subseq = 2
  *     len_seq = len(seq)
  *     start = 0             # <<<<<<<<<<<<<<
@@ -1783,7 +1764,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
  */
   __pyx_v_start = 0;
 
-  /* "edge_gravity.pyx":20
+  /* "edge_gravity/edge_gravity.pyx":20
  *     len_seq = len(seq)
  *     start = 0
  *     end = len_subseq             # <<<<<<<<<<<<<<
@@ -1792,7 +1773,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
  */
   __pyx_v_end = __pyx_v_len_subseq;
 
-  /* "edge_gravity.pyx":21
+  /* "edge_gravity/edge_gravity.pyx":21
  *     start = 0
  *     end = len_subseq
  *     for _ in range(len_seq - len_subseq + 1):             # <<<<<<<<<<<<<<
@@ -1804,7 +1785,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v__ = __pyx_t_4;
 
-    /* "edge_gravity.pyx":22
+    /* "edge_gravity/edge_gravity.pyx":22
  *     end = len_subseq
  *     for _ in range(len_seq - len_subseq + 1):
  *         if seq[start:end] == subseq:             # <<<<<<<<<<<<<<
@@ -1823,7 +1804,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (__pyx_t_7) {
 
-      /* "edge_gravity.pyx":23
+      /* "edge_gravity/edge_gravity.pyx":23
  *     for _ in range(len_seq - len_subseq + 1):
  *         if seq[start:end] == subseq:
  *             return True             # <<<<<<<<<<<<<<
@@ -1835,7 +1816,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
       __pyx_r = Py_True;
       goto __pyx_L0;
 
-      /* "edge_gravity.pyx":22
+      /* "edge_gravity/edge_gravity.pyx":22
  *     end = len_subseq
  *     for _ in range(len_seq - len_subseq + 1):
  *         if seq[start:end] == subseq:             # <<<<<<<<<<<<<<
@@ -1844,7 +1825,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
  */
     }
 
-    /* "edge_gravity.pyx":24
+    /* "edge_gravity/edge_gravity.pyx":24
  *         if seq[start:end] == subseq:
  *             return True
  *         start += 1             # <<<<<<<<<<<<<<
@@ -1853,7 +1834,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
  */
     __pyx_v_start = (__pyx_v_start + 1);
 
-    /* "edge_gravity.pyx":25
+    /* "edge_gravity/edge_gravity.pyx":25
  *             return True
  *         start += 1
  *         end = start + len_subseq             # <<<<<<<<<<<<<<
@@ -1864,7 +1845,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
   }
   /*else*/ {
 
-    /* "edge_gravity.pyx":27
+    /* "edge_gravity/edge_gravity.pyx":27
  *         end = start + len_subseq
  *     else:
  *         return False             # <<<<<<<<<<<<<<
@@ -1877,7 +1858,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
     goto __pyx_L0;
   }
 
-  /* "edge_gravity.pyx":14
+  /* "edge_gravity/edge_gravity.pyx":14
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cdef is_subsequence(tuple subseq, tuple seq):             # <<<<<<<<<<<<<<
@@ -1889,7 +1870,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("edge_gravity.is_subsequence", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("edge_gravity.edge_gravity.is_subsequence", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1897,7 +1878,7 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
   return __pyx_r;
 }
 
-/* "edge_gravity.pyx":29
+/* "edge_gravity/edge_gravity.pyx":29
  *         return False
  * 
  * def worker(args):             # <<<<<<<<<<<<<<
@@ -1906,22 +1887,22 @@ static PyObject *__pyx_f_12edge_gravity_is_subsequence(PyObject *__pyx_v_subseq,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12edge_gravity_1worker(PyObject *__pyx_self, PyObject *__pyx_v_args); /*proto*/
-static char __pyx_doc_12edge_gravity_worker[] = "\n    does the heavy lifting - every process gets a worker and every worker a subset of#\n    nodes for which the calculations are done. The results are added up at the end.\n    ";
-static PyMethodDef __pyx_mdef_12edge_gravity_1worker = {"worker", (PyCFunction)__pyx_pw_12edge_gravity_1worker, METH_O, __pyx_doc_12edge_gravity_worker};
-static PyObject *__pyx_pw_12edge_gravity_1worker(PyObject *__pyx_self, PyObject *__pyx_v_args) {
+static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_1worker(PyObject *__pyx_self, PyObject *__pyx_v_args); /*proto*/
+static char __pyx_doc_12edge_gravity_12edge_gravity_worker[] = "\n    does the heavy lifting - every process gets a worker and every worker a subset of#\n    nodes for which the calculations are done. The results are added up at the end.\n    ";
+static PyMethodDef __pyx_mdef_12edge_gravity_12edge_gravity_1worker = {"worker", (PyCFunction)__pyx_pw_12edge_gravity_12edge_gravity_1worker, METH_O, __pyx_doc_12edge_gravity_12edge_gravity_worker};
+static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_1worker(PyObject *__pyx_self, PyObject *__pyx_v_args) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("worker (wrapper)", 0);
-  __pyx_r = __pyx_pf_12edge_gravity_worker(__pyx_self, ((PyObject *)__pyx_v_args));
+  __pyx_r = __pyx_pf_12edge_gravity_12edge_gravity_worker(__pyx_self, ((PyObject *)__pyx_v_args));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
+static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_6worker_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "edge_gravity.pyx":42
+/* "edge_gravity/edge_gravity.pyx":42
  *     l = defaultdict(int)
  * 
  *     def get_shortest_paths(g, list nodelist, int k, weight):             # <<<<<<<<<<<<<<
@@ -1930,9 +1911,9 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12edge_gravity_6worker_1get_shortest_paths(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_12edge_gravity_6worker_1get_shortest_paths = {"get_shortest_paths", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12edge_gravity_6worker_1get_shortest_paths, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_12edge_gravity_6worker_1get_shortest_paths(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_6worker_1get_shortest_paths(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_12edge_gravity_12edge_gravity_6worker_1get_shortest_paths = {"get_shortest_paths", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12edge_gravity_12edge_gravity_6worker_1get_shortest_paths, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_6worker_1get_shortest_paths(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_nodelist = 0;
   int __pyx_v_k;
@@ -2002,12 +1983,12 @@ static PyObject *__pyx_pw_12edge_gravity_6worker_1get_shortest_paths(PyObject *_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("get_shortest_paths", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 42, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("edge_gravity.worker.get_shortest_paths", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("edge_gravity.edge_gravity.worker.get_shortest_paths", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_nodelist), (&PyList_Type), 1, "nodelist", 1))) __PYX_ERR(0, 42, __pyx_L1_error)
-  __pyx_r = __pyx_pf_12edge_gravity_6worker_get_shortest_paths(__pyx_self, __pyx_v_g, __pyx_v_nodelist, __pyx_v_k, __pyx_v_weight);
+  __pyx_r = __pyx_pf_12edge_gravity_12edge_gravity_6worker_get_shortest_paths(__pyx_self, __pyx_v_g, __pyx_v_nodelist, __pyx_v_k, __pyx_v_weight);
 
   /* function exit code */
   goto __pyx_L0;
@@ -2018,14 +1999,14 @@ static PyObject *__pyx_pw_12edge_gravity_6worker_1get_shortest_paths(PyObject *_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12edge_gravity_6worker_get_shortest_paths(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_nodelist, int __pyx_v_k, PyObject *__pyx_v_weight) {
-  struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *__pyx_cur_scope;
+static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_6worker_get_shortest_paths(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_nodelist, int __pyx_v_k, PyObject *__pyx_v_weight) {
+  struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *__pyx_cur_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_shortest_paths", 0);
-  __pyx_cur_scope = (struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *)__pyx_tp_new_12edge_gravity___pyx_scope_struct__get_shortest_paths(__pyx_ptype_12edge_gravity___pyx_scope_struct__get_shortest_paths, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *)__pyx_tp_new_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths(__pyx_ptype_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *)Py_None);
     __Pyx_INCREF(Py_None);
     __PYX_ERR(0, 42, __pyx_L1_error)
   } else {
@@ -2042,7 +2023,7 @@ static PyObject *__pyx_pf_12edge_gravity_6worker_get_shortest_paths(CYTHON_UNUSE
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_weight);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_weight);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_12edge_gravity_6worker_2generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_get_shortest_paths, __pyx_n_s_worker_locals_get_shortest_paths, __pyx_n_s_edge_gravity); if (unlikely(!gen)) __PYX_ERR(0, 42, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_12edge_gravity_12edge_gravity_6worker_2generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_get_shortest_paths, __pyx_n_s_worker_locals_get_shortest_paths, __pyx_n_s_edge_gravity_edge_gravity); if (unlikely(!gen)) __PYX_ERR(0, 42, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -2050,7 +2031,7 @@ static PyObject *__pyx_pf_12edge_gravity_6worker_get_shortest_paths(CYTHON_UNUSE
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("edge_gravity.worker.get_shortest_paths", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("edge_gravity.edge_gravity.worker.get_shortest_paths", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
   __Pyx_XGIVEREF(__pyx_r);
@@ -2058,9 +2039,9 @@ static PyObject *__pyx_pf_12edge_gravity_6worker_get_shortest_paths(CYTHON_UNUSE
   return __pyx_r;
 }
 
-static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
+static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_6worker_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
 {
-  struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *__pyx_cur_scope = ((struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *)__pyx_generator->closure);
+  struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *__pyx_cur_scope = ((struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *)__pyx_generator->closure);
   PyObject *__pyx_r = NULL;
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
@@ -2092,7 +2073,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
   __pyx_L3_first_run:;
   if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 42, __pyx_L1_error)
 
-  /* "edge_gravity.pyx":44
+  /* "edge_gravity/edge_gravity.pyx":44
  *     def get_shortest_paths(g, list nodelist, int k, weight):
  * 
  *         cdef tuple nodes = tuple(g.nodes())             # <<<<<<<<<<<<<<
@@ -2123,7 +2104,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
   __pyx_cur_scope->__pyx_v_nodes = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "edge_gravity.pyx":47
+  /* "edge_gravity/edge_gravity.pyx":47
  *         cdef str u, v
  * 
  *         for u in nodelist:             # <<<<<<<<<<<<<<
@@ -2149,7 +2130,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "edge_gravity.pyx":48
+    /* "edge_gravity/edge_gravity.pyx":48
  * 
  *         for u in nodelist:
  *             for v in nodes:             # <<<<<<<<<<<<<<
@@ -2171,7 +2152,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
       __Pyx_GIVEREF(__pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "edge_gravity.pyx":49
+      /* "edge_gravity/edge_gravity.pyx":49
  *         for u in nodelist:
  *             for v in nodes:
  *                 if u != v:             # <<<<<<<<<<<<<<
@@ -2182,7 +2163,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
       __pyx_t_7 = (__pyx_t_6 != 0);
       if (__pyx_t_7) {
 
-        /* "edge_gravity.pyx":50
+        /* "edge_gravity/edge_gravity.pyx":50
  *             for v in nodes:
  *                 if u != v:
  *                     try:             # <<<<<<<<<<<<<<
@@ -2196,7 +2177,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
           __Pyx_XGOTREF(__pyx_t_10);
           /*try:*/ {
 
-            /* "edge_gravity.pyx":51
+            /* "edge_gravity/edge_gravity.pyx":51
  *                 if u != v:
  *                     try:
  *                         for path in islice(nx.shortest_simple_paths(g, u, v, weight=weight), k):             # <<<<<<<<<<<<<<
@@ -2325,7 +2306,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
               __Pyx_GIVEREF(__pyx_t_3);
               __pyx_t_3 = 0;
 
-              /* "edge_gravity.pyx":52
+              /* "edge_gravity/edge_gravity.pyx":52
  *                     try:
  *                         for path in islice(nx.shortest_simple_paths(g, u, v, weight=weight), k):
  *                             yield (u, v, path)             # <<<<<<<<<<<<<<
@@ -2392,7 +2373,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
               __pyx_t_18 = __pyx_cur_scope->__pyx_t_9;
               if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 52, __pyx_L9_error)
 
-              /* "edge_gravity.pyx":51
+              /* "edge_gravity/edge_gravity.pyx":51
  *                 if u != v:
  *                     try:
  *                         for path in islice(nx.shortest_simple_paths(g, u, v, weight=weight), k):             # <<<<<<<<<<<<<<
@@ -2402,7 +2383,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
             }
             __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-            /* "edge_gravity.pyx":50
+            /* "edge_gravity/edge_gravity.pyx":50
  *             for v in nodes:
  *                 if u != v:
  *                     try:             # <<<<<<<<<<<<<<
@@ -2422,7 +2403,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
           __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "edge_gravity.pyx":53
+          /* "edge_gravity/edge_gravity.pyx":53
  *                         for path in islice(nx.shortest_simple_paths(g, u, v, weight=weight), k):
  *                             yield (u, v, path)
  *                     except nx.NetworkXNoPath:             # <<<<<<<<<<<<<<
@@ -2446,7 +2427,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
           goto __pyx_L11_except_error;
           __pyx_L11_except_error:;
 
-          /* "edge_gravity.pyx":50
+          /* "edge_gravity/edge_gravity.pyx":50
  *             for v in nodes:
  *                 if u != v:
  *                     try:             # <<<<<<<<<<<<<<
@@ -2466,7 +2447,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
           __pyx_L16_try_end:;
         }
 
-        /* "edge_gravity.pyx":49
+        /* "edge_gravity/edge_gravity.pyx":49
  *         for u in nodelist:
  *             for v in nodes:
  *                 if u != v:             # <<<<<<<<<<<<<<
@@ -2475,7 +2456,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
  */
       }
 
-      /* "edge_gravity.pyx":48
+      /* "edge_gravity/edge_gravity.pyx":48
  * 
  *         for u in nodelist:
  *             for v in nodes:             # <<<<<<<<<<<<<<
@@ -2485,7 +2466,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "edge_gravity.pyx":47
+    /* "edge_gravity/edge_gravity.pyx":47
  *         cdef str u, v
  * 
  *         for u in nodelist:             # <<<<<<<<<<<<<<
@@ -2496,7 +2477,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "edge_gravity.pyx":42
+  /* "edge_gravity/edge_gravity.pyx":42
  *     l = defaultdict(int)
  * 
  *     def get_shortest_paths(g, list nodelist, int k, weight):             # <<<<<<<<<<<<<<
@@ -2528,7 +2509,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
   return __pyx_r;
 }
 
-/* "edge_gravity.pyx":29
+/* "edge_gravity/edge_gravity.pyx":29
  *         return False
  * 
  * def worker(args):             # <<<<<<<<<<<<<<
@@ -2536,7 +2517,7 @@ static PyObject *__pyx_gb_12edge_gravity_6worker_2generator(__pyx_CoroutineObjec
  *     does the heavy lifting - every process gets a worker and every worker a subset of#
  */
 
-static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_args) {
+static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_args) {
   PyObject *__pyx_v_nodelist = 0;
   int __pyx_v_k;
   PyObject *__pyx_v_u = 0;
@@ -2566,7 +2547,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
   int __pyx_t_12;
   __Pyx_RefNannySetupContext("worker", 0);
 
-  /* "edge_gravity.pyx":39
+  /* "edge_gravity/edge_gravity.pyx":39
  *     cdef tuple edge, edges, tuple_path
  * 
  *     g, nodelist, k, weight = args             # <<<<<<<<<<<<<<
@@ -2641,7 +2622,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_weight = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "edge_gravity.pyx":40
+  /* "edge_gravity/edge_gravity.pyx":40
  * 
  *     g, nodelist, k, weight = args
  *     l = defaultdict(int)             # <<<<<<<<<<<<<<
@@ -2668,19 +2649,19 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_l = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "edge_gravity.pyx":42
+  /* "edge_gravity/edge_gravity.pyx":42
  *     l = defaultdict(int)
  * 
  *     def get_shortest_paths(g, list nodelist, int k, weight):             # <<<<<<<<<<<<<<
  * 
  *         cdef tuple nodes = tuple(g.nodes())
  */
-  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12edge_gravity_6worker_1get_shortest_paths, 0, __pyx_n_s_worker_locals_get_shortest_paths, NULL, __pyx_n_s_edge_gravity, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12edge_gravity_12edge_gravity_6worker_1get_shortest_paths, 0, __pyx_n_s_worker_locals_get_shortest_paths, NULL, __pyx_n_s_edge_gravity_edge_gravity, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_get_shortest_paths = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "edge_gravity.pyx":56
+  /* "edge_gravity/edge_gravity.pyx":56
  *                         pass
  * 
  *     k_counter = defaultdict(int)             # <<<<<<<<<<<<<<
@@ -2707,7 +2688,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_k_counter = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "edge_gravity.pyx":57
+  /* "edge_gravity/edge_gravity.pyx":57
  * 
  *     k_counter = defaultdict(int)
  *     edges = tuple(g.edges())             # <<<<<<<<<<<<<<
@@ -2737,14 +2718,14 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_edges = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "edge_gravity.pyx":59
+  /* "edge_gravity/edge_gravity.pyx":59
  *     edges = tuple(g.edges())
  * 
  *     for u, v, shortest_paths in get_shortest_paths(g, nodelist, k, weight):             # <<<<<<<<<<<<<<
  *         tuple_path = tuple(shortest_paths)
  *         k_counter[tuple([u,v])] += 1
  */
-  __pyx_t_3 = __pyx_pf_12edge_gravity_6worker_get_shortest_paths(__pyx_v_get_shortest_paths, __pyx_v_g, __pyx_v_nodelist, __pyx_v_k, __pyx_v_weight); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_t_3 = __pyx_pf_12edge_gravity_12edge_gravity_6worker_get_shortest_paths(__pyx_v_get_shortest_paths, __pyx_v_g, __pyx_v_nodelist, __pyx_v_k, __pyx_v_weight); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
     __pyx_t_4 = __pyx_t_3; __Pyx_INCREF(__pyx_t_4); __pyx_t_8 = 0;
@@ -2848,7 +2829,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_XDECREF_SET(__pyx_v_shortest_paths, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "edge_gravity.pyx":60
+    /* "edge_gravity/edge_gravity.pyx":60
  * 
  *     for u, v, shortest_paths in get_shortest_paths(g, nodelist, k, weight):
  *         tuple_path = tuple(shortest_paths)             # <<<<<<<<<<<<<<
@@ -2860,7 +2841,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_XDECREF_SET(__pyx_v_tuple_path, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "edge_gravity.pyx":61
+    /* "edge_gravity/edge_gravity.pyx":61
  *     for u, v, shortest_paths in get_shortest_paths(g, nodelist, k, weight):
  *         tuple_path = tuple(shortest_paths)
  *         k_counter[tuple([u,v])] += 1             # <<<<<<<<<<<<<<
@@ -2887,7 +2868,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "edge_gravity.pyx":62
+    /* "edge_gravity/edge_gravity.pyx":62
  *         tuple_path = tuple(shortest_paths)
  *         k_counter[tuple([u,v])] += 1
  *         for edge in edges:             # <<<<<<<<<<<<<<
@@ -2907,20 +2888,20 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
       __Pyx_XDECREF_SET(__pyx_v_edge, ((PyObject*)__pyx_t_1));
       __pyx_t_1 = 0;
 
-      /* "edge_gravity.pyx":63
+      /* "edge_gravity/edge_gravity.pyx":63
  *         k_counter[tuple([u,v])] += 1
  *         for edge in edges:
  *             if is_subsequence(edge, tuple_path):             # <<<<<<<<<<<<<<
  *                 l[tuple(edge)] += 1
  * 
  */
-      __pyx_t_1 = __pyx_f_12edge_gravity_is_subsequence(__pyx_v_edge, __pyx_v_tuple_path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+      __pyx_t_1 = __pyx_f_12edge_gravity_12edge_gravity_is_subsequence(__pyx_v_edge, __pyx_v_tuple_path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_12) {
 
-        /* "edge_gravity.pyx":64
+        /* "edge_gravity/edge_gravity.pyx":64
  *         for edge in edges:
  *             if is_subsequence(edge, tuple_path):
  *                 l[tuple(edge)] += 1             # <<<<<<<<<<<<<<
@@ -2938,7 +2919,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-        /* "edge_gravity.pyx":63
+        /* "edge_gravity/edge_gravity.pyx":63
  *         k_counter[tuple([u,v])] += 1
  *         for edge in edges:
  *             if is_subsequence(edge, tuple_path):             # <<<<<<<<<<<<<<
@@ -2947,7 +2928,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
  */
       }
 
-      /* "edge_gravity.pyx":62
+      /* "edge_gravity/edge_gravity.pyx":62
  *         tuple_path = tuple(shortest_paths)
  *         k_counter[tuple([u,v])] += 1
  *         for edge in edges:             # <<<<<<<<<<<<<<
@@ -2957,7 +2938,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "edge_gravity.pyx":59
+    /* "edge_gravity/edge_gravity.pyx":59
  *     edges = tuple(g.edges())
  * 
  *     for u, v, shortest_paths in get_shortest_paths(g, nodelist, k, weight):             # <<<<<<<<<<<<<<
@@ -2967,7 +2948,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "edge_gravity.pyx":66
+  /* "edge_gravity/edge_gravity.pyx":66
  *                 l[tuple(edge)] += 1
  * 
  *     return k_counter, l             # <<<<<<<<<<<<<<
@@ -2987,7 +2968,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "edge_gravity.pyx":29
+  /* "edge_gravity/edge_gravity.pyx":29
  *         return False
  * 
  * def worker(args):             # <<<<<<<<<<<<<<
@@ -3003,7 +2984,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("edge_gravity.worker", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("edge_gravity.edge_gravity.worker", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_nodelist);
@@ -3023,7 +3004,7 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "edge_gravity.pyx":68
+/* "edge_gravity/edge_gravity.pyx":68
  *     return k_counter, l
  * 
  * def edge_gravity(g, k=None, weight=None):             # <<<<<<<<<<<<<<
@@ -3032,10 +3013,10 @@ static PyObject *__pyx_pf_12edge_gravity_worker(CYTHON_UNUSED PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12edge_gravity_3edge_gravity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12edge_gravity_2edge_gravity[] = "\n    Function that calculates Edge Gravity as described in:\n        Helander, M.E. & McAllister, S. Appl Netw Sci (2018) 3: 7. \n        https://doi.org/10.1007/s41109-018-0063-6\n    \n    The k-shortest-paths algorithm stems from:\n        Jin Y. Yen, \"Finding the K Shortest Loopless Paths in a\n       Network\", Management Science, Vol. 17, No. 11, Theory Series\n       (Jul., 1971), pp. 712-716\n    \n    It utilizes multiple cores, only tested on Linux.\n    \n    Parameters\n    ----------\n    g: NetworkX DiGraph\n    \n    k: non-negative Integer that describes the maximum number of shortest\n        path to consider per node.\n        \n    weight: gets passed to networkx.shortest_simple_paths - for a detailed description\n        see the docstring of this function.\n    ";
-static PyMethodDef __pyx_mdef_12edge_gravity_3edge_gravity = {"edge_gravity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12edge_gravity_3edge_gravity, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12edge_gravity_2edge_gravity};
-static PyObject *__pyx_pw_12edge_gravity_3edge_gravity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_3edge_gravity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12edge_gravity_12edge_gravity_2edge_gravity[] = "\n    Function that calculates Edge Gravity as described in:\n        Helander, M.E. & McAllister, S. Appl Netw Sci (2018) 3: 7.\n        https://doi.org/10.1007/s41109-018-0063-6\n\n    The k-shortest-paths algorithm stems from:\n        Jin Y. Yen, \"Finding the K Shortest Loopless Paths in a\n       Network\", Management Science, Vol. 17, No. 11, Theory Series\n       (Jul., 1971), pp. 712-716\n\n    It utilizes multiple cores, only tested on Linux.\n\n    Parameters\n    ----------\n    g: NetworkX DiGraph\n\n    k: non-negative Integer that describes the maximum number of shortest\n        path to consider per node.\n\n    weight: gets passed to networkx.shortest_simple_paths - for a detailed description\n        see the docstring of this function.\n    ";
+static PyMethodDef __pyx_mdef_12edge_gravity_12edge_gravity_3edge_gravity = {"edge_gravity", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12edge_gravity_12edge_gravity_3edge_gravity, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12edge_gravity_12edge_gravity_2edge_gravity};
+static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_3edge_gravity(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_k = 0;
   PyObject *__pyx_v_weight = 0;
@@ -3100,19 +3081,19 @@ static PyObject *__pyx_pw_12edge_gravity_3edge_gravity(PyObject *__pyx_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("edge_gravity", 0, 1, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 68, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("edge_gravity.edge_gravity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("edge_gravity.edge_gravity.edge_gravity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12edge_gravity_2edge_gravity(__pyx_self, __pyx_v_g, __pyx_v_k, __pyx_v_weight);
+  __pyx_r = __pyx_pf_12edge_gravity_12edge_gravity_2edge_gravity(__pyx_self, __pyx_v_g, __pyx_v_k, __pyx_v_weight);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
+static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_12edge_gravity_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "edge_gravity.pyx":95
+/* "edge_gravity/edge_gravity.pyx":95
  *         k = 999_999
  * 
  *     def chunks(iterable, chunksize):             # <<<<<<<<<<<<<<
@@ -3121,9 +3102,9 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_1chunks(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_12edge_gravity_12edge_gravity_1chunks = {"chunks", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12edge_gravity_12edge_gravity_1chunks, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_1chunks(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_12edge_gravity_1chunks(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_12edge_gravity_12edge_gravity_12edge_gravity_1chunks = {"chunks", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12edge_gravity_12edge_gravity_12edge_gravity_1chunks, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_12edge_gravity_1chunks(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_iterable = 0;
   PyObject *__pyx_v_chunksize = 0;
   PyObject *__pyx_r = 0;
@@ -3171,25 +3152,25 @@ static PyObject *__pyx_pw_12edge_gravity_12edge_gravity_1chunks(PyObject *__pyx_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("chunks", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 95, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("edge_gravity.edge_gravity.chunks", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("edge_gravity.edge_gravity.edge_gravity.chunks", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12edge_gravity_12edge_gravity_chunks(__pyx_self, __pyx_v_iterable, __pyx_v_chunksize);
+  __pyx_r = __pyx_pf_12edge_gravity_12edge_gravity_12edge_gravity_chunks(__pyx_self, __pyx_v_iterable, __pyx_v_chunksize);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_chunks(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_iterable, PyObject *__pyx_v_chunksize) {
-  struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *__pyx_cur_scope;
+static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_12edge_gravity_chunks(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_iterable, PyObject *__pyx_v_chunksize) {
+  struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *__pyx_cur_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("chunks", 0);
-  __pyx_cur_scope = (struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *)__pyx_tp_new_12edge_gravity___pyx_scope_struct_1_chunks(__pyx_ptype_12edge_gravity___pyx_scope_struct_1_chunks, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *)__pyx_tp_new_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks(__pyx_ptype_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *)Py_None);
     __Pyx_INCREF(Py_None);
     __PYX_ERR(0, 95, __pyx_L1_error)
   } else {
@@ -3202,7 +3183,7 @@ static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_chunks(CYTHON_UNUSED PyO
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_chunksize);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_chunksize);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_12edge_gravity_12edge_gravity_2generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_chunks, __pyx_n_s_edge_gravity_locals_chunks, __pyx_n_s_edge_gravity); if (unlikely(!gen)) __PYX_ERR(0, 95, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_12edge_gravity_12edge_gravity_12edge_gravity_2generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_chunks, __pyx_n_s_edge_gravity_locals_chunks, __pyx_n_s_edge_gravity_edge_gravity); if (unlikely(!gen)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -3210,7 +3191,7 @@ static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_chunks(CYTHON_UNUSED PyO
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("edge_gravity.edge_gravity.chunks", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("edge_gravity.edge_gravity.edge_gravity.chunks", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
   __Pyx_XGIVEREF(__pyx_r);
@@ -3218,9 +3199,9 @@ static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_chunks(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
+static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_12edge_gravity_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
 {
-  struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *__pyx_cur_scope = ((struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *)__pyx_generator->closure);
+  struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *__pyx_cur_scope = ((struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *)__pyx_generator->closure);
   PyObject *__pyx_r = NULL;
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
@@ -3244,7 +3225,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
   __pyx_L3_first_run:;
   if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 95, __pyx_L1_error)
 
-  /* "edge_gravity.pyx":96
+  /* "edge_gravity/edge_gravity.pyx":96
  * 
  *     def chunks(iterable, chunksize):
  *         iterable = iter(iterable)             # <<<<<<<<<<<<<<
@@ -3258,7 +3239,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "edge_gravity.pyx":97
+  /* "edge_gravity/edge_gravity.pyx":97
  *     def chunks(iterable, chunksize):
  *         iterable = iter(iterable)
  *         temp = [next(iterable)]             # <<<<<<<<<<<<<<
@@ -3276,7 +3257,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
   __pyx_cur_scope->__pyx_v_temp = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "edge_gravity.pyx":99
+  /* "edge_gravity/edge_gravity.pyx":99
  *         temp = [next(iterable)]
  * 
  *         for item in iterable:             # <<<<<<<<<<<<<<
@@ -3327,7 +3308,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "edge_gravity.pyx":100
+    /* "edge_gravity/edge_gravity.pyx":100
  * 
  *         for item in iterable:
  *             if not len(temp) % chunksize:             # <<<<<<<<<<<<<<
@@ -3345,7 +3326,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
     __pyx_t_8 = ((!__pyx_t_7) != 0);
     if (__pyx_t_8) {
 
-      /* "edge_gravity.pyx":101
+      /* "edge_gravity/edge_gravity.pyx":101
  *         for item in iterable:
  *             if not len(temp) % chunksize:
  *                 yield temp             # <<<<<<<<<<<<<<
@@ -3372,7 +3353,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
       __pyx_t_4 = __pyx_cur_scope->__pyx_t_2;
       if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 101, __pyx_L1_error)
 
-      /* "edge_gravity.pyx":102
+      /* "edge_gravity/edge_gravity.pyx":102
  *             if not len(temp) % chunksize:
  *                 yield temp
  *                 temp = []             # <<<<<<<<<<<<<<
@@ -3386,7 +3367,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
       __Pyx_GIVEREF(__pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "edge_gravity.pyx":100
+      /* "edge_gravity/edge_gravity.pyx":100
  * 
  *         for item in iterable:
  *             if not len(temp) % chunksize:             # <<<<<<<<<<<<<<
@@ -3395,7 +3376,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
  */
     }
 
-    /* "edge_gravity.pyx":103
+    /* "edge_gravity/edge_gravity.pyx":103
  *                 yield temp
  *                 temp = []
  *             temp.append(item)             # <<<<<<<<<<<<<<
@@ -3404,7 +3385,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
  */
     __pyx_t_9 = __Pyx_PyList_Append(__pyx_cur_scope->__pyx_v_temp, __pyx_cur_scope->__pyx_v_item); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 103, __pyx_L1_error)
 
-    /* "edge_gravity.pyx":99
+    /* "edge_gravity/edge_gravity.pyx":99
  *         temp = [next(iterable)]
  * 
  *         for item in iterable:             # <<<<<<<<<<<<<<
@@ -3414,7 +3395,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "edge_gravity.pyx":105
+  /* "edge_gravity/edge_gravity.pyx":105
  *             temp.append(item)
  * 
  *         yield temp             # <<<<<<<<<<<<<<
@@ -3433,7 +3414,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
   if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 105, __pyx_L1_error)
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "edge_gravity.pyx":95
+  /* "edge_gravity/edge_gravity.pyx":95
  *         k = 999_999
  * 
  *     def chunks(iterable, chunksize):             # <<<<<<<<<<<<<<
@@ -3460,7 +3441,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
   return __pyx_r;
 }
 
-/* "edge_gravity.pyx":68
+/* "edge_gravity/edge_gravity.pyx":68
  *     return k_counter, l
  * 
  * def edge_gravity(g, k=None, weight=None):             # <<<<<<<<<<<<<<
@@ -3468,7 +3449,7 @@ static PyObject *__pyx_gb_12edge_gravity_12edge_gravity_2generator1(__pyx_Corout
  *     Function that calculates Edge Gravity as described in:
  */
 
-static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_k, PyObject *__pyx_v_weight) {
+static PyObject *__pyx_pf_12edge_gravity_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_k, PyObject *__pyx_v_weight) {
   PyObject *__pyx_v_chunks = 0;
   PyObject *__pyx_v_exe = NULL;
   PyObject *__pyx_v_futures = NULL;
@@ -3480,6 +3461,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_v_k_result = NULL;
   PyObject *__pyx_v_r = NULL;
   PyObject *__pyx_v_gravity_result = NULL;
+  int __pyx_v_kstar_found;
   PyObject *__pyx_v_future = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3504,7 +3486,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
   __Pyx_RefNannySetupContext("edge_gravity", 0);
   __Pyx_INCREF(__pyx_v_k);
 
-  /* "edge_gravity.pyx":92
+  /* "edge_gravity/edge_gravity.pyx":92
  *     """
  * 
  *     if k == None:             # <<<<<<<<<<<<<<
@@ -3516,7 +3498,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "edge_gravity.pyx":93
+    /* "edge_gravity/edge_gravity.pyx":93
  * 
  *     if k == None:
  *         k = 999_999             # <<<<<<<<<<<<<<
@@ -3526,7 +3508,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
     __Pyx_INCREF(__pyx_int_999999);
     __Pyx_DECREF_SET(__pyx_v_k, __pyx_int_999999);
 
-    /* "edge_gravity.pyx":92
+    /* "edge_gravity/edge_gravity.pyx":92
  *     """
  * 
  *     if k == None:             # <<<<<<<<<<<<<<
@@ -3535,19 +3517,19 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
  */
   }
 
-  /* "edge_gravity.pyx":95
+  /* "edge_gravity/edge_gravity.pyx":95
  *         k = 999_999
  * 
  *     def chunks(iterable, chunksize):             # <<<<<<<<<<<<<<
  *         iterable = iter(iterable)
  *         temp = [next(iterable)]
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12edge_gravity_12edge_gravity_1chunks, 0, __pyx_n_s_edge_gravity_locals_chunks, NULL, __pyx_n_s_edge_gravity, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12edge_gravity_12edge_gravity_12edge_gravity_1chunks, 0, __pyx_n_s_edge_gravity_locals_chunks, NULL, __pyx_n_s_edge_gravity_edge_gravity, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_chunks = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "edge_gravity.pyx":107
+  /* "edge_gravity/edge_gravity.pyx":107
  *         yield temp
  * 
  *     with ProcessPoolExecutor(max_workers=cpu_count()) as exe:             # <<<<<<<<<<<<<<
@@ -3616,7 +3598,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           __pyx_v_exe = __pyx_t_1;
           __pyx_t_1 = 0;
 
-          /* "edge_gravity.pyx":109
+          /* "edge_gravity/edge_gravity.pyx":109
  *     with ProcessPoolExecutor(max_workers=cpu_count()) as exe:
  * 
  *         futures = []             # <<<<<<<<<<<<<<
@@ -3628,7 +3610,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           __pyx_v_futures = ((PyObject*)__pyx_t_1);
           __pyx_t_1 = 0;
 
-          /* "edge_gravity.pyx":110
+          /* "edge_gravity/edge_gravity.pyx":110
  * 
  *         futures = []
  *         nodes = list(g.nodes())             # <<<<<<<<<<<<<<
@@ -3658,7 +3640,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           __pyx_v_nodes = ((PyObject*)__pyx_t_4);
           __pyx_t_4 = 0;
 
-          /* "edge_gravity.pyx":111
+          /* "edge_gravity/edge_gravity.pyx":111
  *         futures = []
  *         nodes = list(g.nodes())
  *         random.shuffle(nodes)             # <<<<<<<<<<<<<<
@@ -3687,7 +3669,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "edge_gravity.pyx":113
+          /* "edge_gravity/edge_gravity.pyx":113
  *         random.shuffle(nodes)
  * 
  *         for chunk in chunks(nodes, math.ceil(len(g.nodes()) / cpu_count() * .3)):             # <<<<<<<<<<<<<<
@@ -3760,7 +3742,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-          __pyx_t_1 = __pyx_pf_12edge_gravity_12edge_gravity_chunks(__pyx_v_chunks, __pyx_v_nodes, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L8_error)
+          __pyx_t_1 = __pyx_pf_12edge_gravity_12edge_gravity_12edge_gravity_chunks(__pyx_v_chunks, __pyx_v_nodes, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
@@ -3806,7 +3788,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
             __Pyx_XDECREF_SET(__pyx_v_chunk, __pyx_t_1);
             __pyx_t_1 = 0;
 
-            /* "edge_gravity.pyx":114
+            /* "edge_gravity/edge_gravity.pyx":114
  * 
  *         for chunk in chunks(nodes, math.ceil(len(g.nodes()) / cpu_count() * .3)):
  *             futures.append(exe.submit(worker, (g, chunk, k, weight)))             # <<<<<<<<<<<<<<
@@ -3883,7 +3865,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
             __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_futures, __pyx_t_1); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 114, __pyx_L8_error)
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-            /* "edge_gravity.pyx":113
+            /* "edge_gravity/edge_gravity.pyx":113
  *         random.shuffle(nodes)
  * 
  *         for chunk in chunks(nodes, math.ceil(len(g.nodes()) / cpu_count() * .3)):             # <<<<<<<<<<<<<<
@@ -3893,7 +3875,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           }
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "edge_gravity.pyx":116
+          /* "edge_gravity/edge_gravity.pyx":116
  *             futures.append(exe.submit(worker, (g, chunk, k, weight)))
  * 
  *         results = [future.result() for future in futures]             # <<<<<<<<<<<<<<
@@ -3937,7 +3919,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           __pyx_v_results = ((PyObject*)__pyx_t_4);
           __pyx_t_4 = 0;
 
-          /* "edge_gravity.pyx":117
+          /* "edge_gravity/edge_gravity.pyx":117
  * 
  *         results = [future.result() for future in futures]
  *         k_counters, gravity_counters = list(zip(*results))             # <<<<<<<<<<<<<<
@@ -3978,7 +3960,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           __pyx_v_gravity_counters = __pyx_t_5;
           __pyx_t_5 = 0;
 
-          /* "edge_gravity.pyx":119
+          /* "edge_gravity/edge_gravity.pyx":119
  *         k_counters, gravity_counters = list(zip(*results))
  * 
  *         k_result = Counter()             # <<<<<<<<<<<<<<
@@ -4005,7 +3987,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           __pyx_v_k_result = __pyx_t_4;
           __pyx_t_4 = 0;
 
-          /* "edge_gravity.pyx":120
+          /* "edge_gravity/edge_gravity.pyx":120
  * 
  *         k_result = Counter()
  *         for r in k_counters:             # <<<<<<<<<<<<<<
@@ -4054,7 +4036,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
             __Pyx_XDECREF_SET(__pyx_v_r, __pyx_t_5);
             __pyx_t_5 = 0;
 
-            /* "edge_gravity.pyx":121
+            /* "edge_gravity/edge_gravity.pyx":121
  *         k_result = Counter()
  *         for r in k_counters:
  *             k_result += r             # <<<<<<<<<<<<<<
@@ -4066,7 +4048,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
             __Pyx_DECREF_SET(__pyx_v_k_result, __pyx_t_5);
             __pyx_t_5 = 0;
 
-            /* "edge_gravity.pyx":120
+            /* "edge_gravity/edge_gravity.pyx":120
  * 
  *         k_result = Counter()
  *         for r in k_counters:             # <<<<<<<<<<<<<<
@@ -4076,7 +4058,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           }
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "edge_gravity.pyx":123
+          /* "edge_gravity/edge_gravity.pyx":123
  *             k_result += r
  * 
  *         gravity_result = Counter()             # <<<<<<<<<<<<<<
@@ -4103,7 +4085,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           __pyx_v_gravity_result = __pyx_t_4;
           __pyx_t_4 = 0;
 
-          /* "edge_gravity.pyx":124
+          /* "edge_gravity/edge_gravity.pyx":124
  * 
  *         gravity_result = Counter()
  *         for r in gravity_counters:             # <<<<<<<<<<<<<<
@@ -4152,7 +4134,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
             __Pyx_XDECREF_SET(__pyx_v_r, __pyx_t_5);
             __pyx_t_5 = 0;
 
-            /* "edge_gravity.pyx":125
+            /* "edge_gravity/edge_gravity.pyx":125
  *         gravity_result = Counter()
  *         for r in gravity_counters:
  *             gravity_result += r             # <<<<<<<<<<<<<<
@@ -4164,7 +4146,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
             __Pyx_DECREF_SET(__pyx_v_gravity_result, __pyx_t_5);
             __pyx_t_5 = 0;
 
-            /* "edge_gravity.pyx":124
+            /* "edge_gravity/edge_gravity.pyx":124
  * 
  *         gravity_result = Counter()
  *         for r in gravity_counters:             # <<<<<<<<<<<<<<
@@ -4174,12 +4156,12 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           }
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "edge_gravity.pyx":127
+          /* "edge_gravity/edge_gravity.pyx":127
  *             gravity_result += r
  * 
  *         if max(k_result.values()) >= k:             # <<<<<<<<<<<<<<
+ *             kstar_found = False
  *             print(f"k* not found !, must be larger than or equal to {k}")
- *         else:
  */
           __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_k_result, __pyx_n_s_values); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 127, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_5);
@@ -4207,40 +4189,58 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           if (__pyx_t_2) {
 
-            /* "edge_gravity.pyx":128
+            /* "edge_gravity/edge_gravity.pyx":128
  * 
  *         if max(k_result.values()) >= k:
+ *             kstar_found = False             # <<<<<<<<<<<<<<
+ *             print(f"k* not found !, must be larger than or equal to {k}")
+ *         else:
+ */
+            __pyx_v_kstar_found = 0;
+
+            /* "edge_gravity/edge_gravity.pyx":129
+ *         if max(k_result.values()) >= k:
+ *             kstar_found = False
  *             print(f"k* not found !, must be larger than or equal to {k}")             # <<<<<<<<<<<<<<
  *         else:
- *             print(f"k* found !, is exactly {max(k_result.values())}")
+ *             kstar_found = True
  */
-            __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_v_k, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 128, __pyx_L8_error)
+            __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_v_k, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 129, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_4);
-            __pyx_t_5 = __Pyx_PyUnicode_Concat(__pyx_kp_u_k_not_found_must_be_larger_than, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 128, __pyx_L8_error)
+            __pyx_t_5 = __Pyx_PyUnicode_Concat(__pyx_kp_u_k_not_found_must_be_larger_than, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 129, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_5);
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-            if (__Pyx_PrintOne(0, __pyx_t_5) < 0) __PYX_ERR(0, 128, __pyx_L8_error)
+            if (__Pyx_PrintOne(0, __pyx_t_5) < 0) __PYX_ERR(0, 129, __pyx_L8_error)
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-            /* "edge_gravity.pyx":127
+            /* "edge_gravity/edge_gravity.pyx":127
  *             gravity_result += r
  * 
  *         if max(k_result.values()) >= k:             # <<<<<<<<<<<<<<
+ *             kstar_found = False
  *             print(f"k* not found !, must be larger than or equal to {k}")
- *         else:
  */
             goto __pyx_L22;
           }
 
-          /* "edge_gravity.pyx":130
+          /* "edge_gravity/edge_gravity.pyx":131
  *             print(f"k* not found !, must be larger than or equal to {k}")
  *         else:
- *             print(f"k* found !, is exactly {max(k_result.values())}")             # <<<<<<<<<<<<<<
+ *             kstar_found = True             # <<<<<<<<<<<<<<
+ *             print(f"k* found !, is exactly {max(k_result.values())}")
  * 
- *     return gravity_result
  */
           /*else*/ {
-            __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_k_result, __pyx_n_s_values); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L8_error)
+            __pyx_v_kstar_found = 1;
+
+            /* "edge_gravity/edge_gravity.pyx":132
+ *         else:
+ *             kstar_found = True
+ *             print(f"k* found !, is exactly {max(k_result.values())}")             # <<<<<<<<<<<<<<
+ * 
+ *     return kstar_found, gravity_result
+ */
+            __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_k_result, __pyx_n_s_values); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_4);
             __pyx_t_1 = NULL;
             if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -4254,24 +4254,24 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
             }
             __pyx_t_5 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
             __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-            if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L8_error)
+            if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 132, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_5);
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-            __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L8_error)
+            __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_max, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-            __pyx_t_5 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L8_error)
+            __pyx_t_5 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 132, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_5);
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-            __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_k_found_is_exactly, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L8_error)
+            __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_k_found_is_exactly, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-            if (__Pyx_PrintOne(0, __pyx_t_4) < 0) __PYX_ERR(0, 130, __pyx_L8_error)
+            if (__Pyx_PrintOne(0, __pyx_t_4) < 0) __PYX_ERR(0, 132, __pyx_L8_error)
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           }
           __pyx_L22:;
 
-          /* "edge_gravity.pyx":107
+          /* "edge_gravity/edge_gravity.pyx":107
  *         yield temp
  * 
  *     with ProcessPoolExecutor(max_workers=cpu_count()) as exe:             # <<<<<<<<<<<<<<
@@ -4292,7 +4292,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
         /*except:*/ {
-          __Pyx_AddTraceback("edge_gravity.edge_gravity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("edge_gravity.edge_gravity.edge_gravity", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_5, &__pyx_t_1) < 0) __PYX_ERR(0, 107, __pyx_L10_except_error)
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_GOTREF(__pyx_t_5);
@@ -4355,20 +4355,28 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
     __pyx_L26:;
   }
 
-  /* "edge_gravity.pyx":132
+  /* "edge_gravity/edge_gravity.pyx":134
  *             print(f"k* found !, is exactly {max(k_result.values())}")
  * 
- *     return gravity_result             # <<<<<<<<<<<<<<
- * 
- * if __name__ == "__main__":
+ *     return kstar_found, gravity_result             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_gravity_result)) { __Pyx_RaiseUnboundLocalError("gravity_result"); __PYX_ERR(0, 132, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_kstar_found); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (unlikely(!__pyx_v_gravity_result)) { __Pyx_RaiseUnboundLocalError("gravity_result"); __PYX_ERR(0, 134, __pyx_L1_error) }
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1);
   __Pyx_INCREF(__pyx_v_gravity_result);
-  __pyx_r = __pyx_v_gravity_result;
+  __Pyx_GIVEREF(__pyx_v_gravity_result);
+  PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_gravity_result);
+  __pyx_t_1 = 0;
+  __pyx_r = __pyx_t_5;
+  __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "edge_gravity.pyx":68
+  /* "edge_gravity/edge_gravity.pyx":68
  *     return k_counter, l
  * 
  * def edge_gravity(g, k=None, weight=None):             # <<<<<<<<<<<<<<
@@ -4385,7 +4393,7 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_15);
-  __Pyx_AddTraceback("edge_gravity.edge_gravity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("edge_gravity.edge_gravity.edge_gravity", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_chunks);
@@ -4406,14 +4414,14 @@ static PyObject *__pyx_pf_12edge_gravity_2edge_gravity(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-static struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *__pyx_freelist_12edge_gravity___pyx_scope_struct__get_shortest_paths[8];
-static int __pyx_freecount_12edge_gravity___pyx_scope_struct__get_shortest_paths = 0;
+static struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *__pyx_freelist_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths[8];
+static int __pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths = 0;
 
-static PyObject *__pyx_tp_new_12edge_gravity___pyx_scope_struct__get_shortest_paths(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_12edge_gravity___pyx_scope_struct__get_shortest_paths > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths)))) {
-    o = (PyObject*)__pyx_freelist_12edge_gravity___pyx_scope_struct__get_shortest_paths[--__pyx_freecount_12edge_gravity___pyx_scope_struct__get_shortest_paths];
-    memset(o, 0, sizeof(struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths)))) {
+    o = (PyObject*)__pyx_freelist_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths[--__pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths];
+    memset(o, 0, sizeof(struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -4423,8 +4431,8 @@ static PyObject *__pyx_tp_new_12edge_gravity___pyx_scope_struct__get_shortest_pa
   return o;
 }
 
-static void __pyx_tp_dealloc_12edge_gravity___pyx_scope_struct__get_shortest_paths(PyObject *o) {
-  struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *p = (struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *)o;
+static void __pyx_tp_dealloc_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths(PyObject *o) {
+  struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *p = (struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_g);
   Py_CLEAR(p->__pyx_v_nodelist);
@@ -4439,16 +4447,16 @@ static void __pyx_tp_dealloc_12edge_gravity___pyx_scope_struct__get_shortest_pat
   Py_CLEAR(p->__pyx_t_5);
   Py_CLEAR(p->__pyx_t_6);
   Py_CLEAR(p->__pyx_t_7);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_12edge_gravity___pyx_scope_struct__get_shortest_paths < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths)))) {
-    __pyx_freelist_12edge_gravity___pyx_scope_struct__get_shortest_paths[__pyx_freecount_12edge_gravity___pyx_scope_struct__get_shortest_paths++] = ((struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths)))) {
+    __pyx_freelist_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths[__pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths++] = ((struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_12edge_gravity___pyx_scope_struct__get_shortest_paths(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *p = (struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths *)o;
+  struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *p = (struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths *)o;
   if (p->__pyx_v_g) {
     e = (*v)(p->__pyx_v_g, a); if (e) return e;
   }
@@ -4485,12 +4493,12 @@ static int __pyx_tp_traverse_12edge_gravity___pyx_scope_struct__get_shortest_pat
   return 0;
 }
 
-static PyTypeObject __pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_paths = {
+static PyTypeObject __pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths = {
   PyVarObject_HEAD_INIT(0, 0)
-  "edge_gravity.__pyx_scope_struct__get_shortest_paths", /*tp_name*/
-  sizeof(struct __pyx_obj_12edge_gravity___pyx_scope_struct__get_shortest_paths), /*tp_basicsize*/
+  "edge_gravity.edge_gravity.__pyx_scope_struct__get_shortest_paths", /*tp_name*/
+  sizeof(struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_12edge_gravity___pyx_scope_struct__get_shortest_paths, /*tp_dealloc*/
+  __pyx_tp_dealloc_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -4517,7 +4525,7 @@ static PyTypeObject __pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_p
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_12edge_gravity___pyx_scope_struct__get_shortest_paths, /*tp_traverse*/
+  __pyx_tp_traverse_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths, /*tp_traverse*/
   0, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
@@ -4533,7 +4541,7 @@ static PyTypeObject __pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_p
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_12edge_gravity___pyx_scope_struct__get_shortest_paths, /*tp_new*/
+  __pyx_tp_new_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -4554,14 +4562,14 @@ static PyTypeObject __pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_p
   #endif
 };
 
-static struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *__pyx_freelist_12edge_gravity___pyx_scope_struct_1_chunks[8];
-static int __pyx_freecount_12edge_gravity___pyx_scope_struct_1_chunks = 0;
+static struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *__pyx_freelist_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks[8];
+static int __pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks = 0;
 
-static PyObject *__pyx_tp_new_12edge_gravity___pyx_scope_struct_1_chunks(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_12edge_gravity___pyx_scope_struct_1_chunks > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks)))) {
-    o = (PyObject*)__pyx_freelist_12edge_gravity___pyx_scope_struct_1_chunks[--__pyx_freecount_12edge_gravity___pyx_scope_struct_1_chunks];
-    memset(o, 0, sizeof(struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks)))) {
+    o = (PyObject*)__pyx_freelist_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks[--__pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks];
+    memset(o, 0, sizeof(struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -4571,24 +4579,24 @@ static PyObject *__pyx_tp_new_12edge_gravity___pyx_scope_struct_1_chunks(PyTypeO
   return o;
 }
 
-static void __pyx_tp_dealloc_12edge_gravity___pyx_scope_struct_1_chunks(PyObject *o) {
-  struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *p = (struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *)o;
+static void __pyx_tp_dealloc_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks(PyObject *o) {
+  struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *p = (struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_chunksize);
   Py_CLEAR(p->__pyx_v_item);
   Py_CLEAR(p->__pyx_v_iterable);
   Py_CLEAR(p->__pyx_v_temp);
   Py_CLEAR(p->__pyx_t_0);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_12edge_gravity___pyx_scope_struct_1_chunks < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks)))) {
-    __pyx_freelist_12edge_gravity___pyx_scope_struct_1_chunks[__pyx_freecount_12edge_gravity___pyx_scope_struct_1_chunks++] = ((struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks)))) {
+    __pyx_freelist_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks[__pyx_freecount_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks++] = ((struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_12edge_gravity___pyx_scope_struct_1_chunks(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *p = (struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks *)o;
+  struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *p = (struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks *)o;
   if (p->__pyx_v_chunksize) {
     e = (*v)(p->__pyx_v_chunksize, a); if (e) return e;
   }
@@ -4607,12 +4615,12 @@ static int __pyx_tp_traverse_12edge_gravity___pyx_scope_struct_1_chunks(PyObject
   return 0;
 }
 
-static PyTypeObject __pyx_type_12edge_gravity___pyx_scope_struct_1_chunks = {
+static PyTypeObject __pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks = {
   PyVarObject_HEAD_INIT(0, 0)
-  "edge_gravity.__pyx_scope_struct_1_chunks", /*tp_name*/
-  sizeof(struct __pyx_obj_12edge_gravity___pyx_scope_struct_1_chunks), /*tp_basicsize*/
+  "edge_gravity.edge_gravity.__pyx_scope_struct_1_chunks", /*tp_name*/
+  sizeof(struct __pyx_obj_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_12edge_gravity___pyx_scope_struct_1_chunks, /*tp_dealloc*/
+  __pyx_tp_dealloc_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -4639,7 +4647,7 @@ static PyTypeObject __pyx_type_12edge_gravity___pyx_scope_struct_1_chunks = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_12edge_gravity___pyx_scope_struct_1_chunks, /*tp_traverse*/
+  __pyx_tp_traverse_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks, /*tp_traverse*/
   0, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
@@ -4655,7 +4663,7 @@ static PyTypeObject __pyx_type_12edge_gravity___pyx_scope_struct_1_chunks = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_12edge_gravity___pyx_scope_struct_1_chunks, /*tp_new*/
+  __pyx_tp_new_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -4723,11 +4731,8 @@ static struct PyModuleDef __pyx_moduledef = {
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Counter, __pyx_k_Counter, sizeof(__pyx_k_Counter), 0, 0, 1, 1},
-  {&__pyx_n_s_DiGraph, __pyx_k_DiGraph, sizeof(__pyx_k_DiGraph), 0, 0, 1, 1},
   {&__pyx_n_s_NetworkXNoPath, __pyx_k_NetworkXNoPath, sizeof(__pyx_k_NetworkXNoPath), 0, 0, 1, 1},
   {&__pyx_n_s_ProcessPoolExecutor, __pyx_k_ProcessPoolExecutor, sizeof(__pyx_k_ProcessPoolExecutor), 0, 0, 1, 1},
-  {&__pyx_n_s_add_edge, __pyx_k_add_edge, sizeof(__pyx_k_add_edge), 0, 0, 1, 1},
-  {&__pyx_n_s_add_node, __pyx_k_add_node, sizeof(__pyx_k_add_node), 0, 0, 1, 1},
   {&__pyx_n_s_args, __pyx_k_args, sizeof(__pyx_k_args), 0, 0, 1, 1},
   {&__pyx_n_s_ceil, __pyx_k_ceil, sizeof(__pyx_k_ceil), 0, 0, 1, 1},
   {&__pyx_n_s_chunk, __pyx_k_chunk, sizeof(__pyx_k_chunk), 0, 0, 1, 1},
@@ -4741,6 +4746,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_defaultdict, __pyx_k_defaultdict, sizeof(__pyx_k_defaultdict), 0, 0, 1, 1},
   {&__pyx_n_s_edge, __pyx_k_edge, sizeof(__pyx_k_edge), 0, 0, 1, 1},
   {&__pyx_n_s_edge_gravity, __pyx_k_edge_gravity, sizeof(__pyx_k_edge_gravity), 0, 0, 1, 1},
+  {&__pyx_n_s_edge_gravity_edge_gravity, __pyx_k_edge_gravity_edge_gravity, sizeof(__pyx_k_edge_gravity_edge_gravity), 0, 0, 1, 1},
   {&__pyx_kp_s_edge_gravity_edge_gravity_pyx, __pyx_k_edge_gravity_edge_gravity_pyx, sizeof(__pyx_k_edge_gravity_edge_gravity_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_edge_gravity_locals_chunks, __pyx_k_edge_gravity_locals_chunks, sizeof(__pyx_k_edge_gravity_locals_chunks), 0, 0, 1, 1},
   {&__pyx_n_s_edges, __pyx_k_edges, sizeof(__pyx_k_edges), 0, 0, 1, 1},
@@ -4749,12 +4755,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_exe, __pyx_k_exe, sizeof(__pyx_k_exe), 0, 0, 1, 1},
   {&__pyx_n_s_exit, __pyx_k_exit, sizeof(__pyx_k_exit), 0, 0, 1, 1},
   {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
-  {&__pyx_n_s_florentine_families_graph, __pyx_k_florentine_families_graph, sizeof(__pyx_k_florentine_families_graph), 0, 0, 1, 1},
-  {&__pyx_n_s_florentine_family, __pyx_k_florentine_family, sizeof(__pyx_k_florentine_family), 0, 0, 1, 1},
   {&__pyx_n_s_future, __pyx_k_future, sizeof(__pyx_k_future), 0, 0, 1, 1},
   {&__pyx_n_s_futures, __pyx_k_futures, sizeof(__pyx_k_futures), 0, 0, 1, 1},
   {&__pyx_n_s_g, __pyx_k_g, sizeof(__pyx_k_g), 0, 0, 1, 1},
-  {&__pyx_n_s_generators, __pyx_k_generators, sizeof(__pyx_k_generators), 0, 0, 1, 1},
   {&__pyx_n_s_get_shortest_paths, __pyx_k_get_shortest_paths, sizeof(__pyx_k_get_shortest_paths), 0, 0, 1, 1},
   {&__pyx_n_s_gravity_counters, __pyx_k_gravity_counters, sizeof(__pyx_k_gravity_counters), 0, 0, 1, 1},
   {&__pyx_n_s_gravity_result, __pyx_k_gravity_result, sizeof(__pyx_k_gravity_result), 0, 0, 1, 1},
@@ -4769,17 +4772,15 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_k_found_is_exactly, __pyx_k_k_found_is_exactly, sizeof(__pyx_k_k_found_is_exactly), 0, 1, 0, 0},
   {&__pyx_kp_u_k_not_found_must_be_larger_than, __pyx_k_k_not_found_must_be_larger_than, sizeof(__pyx_k_k_not_found_must_be_larger_than), 0, 1, 0, 0},
   {&__pyx_n_s_k_result, __pyx_k_k_result, sizeof(__pyx_k_k_result), 0, 0, 1, 1},
+  {&__pyx_n_s_kstar_found, __pyx_k_kstar_found, sizeof(__pyx_k_kstar_found), 0, 0, 1, 1},
   {&__pyx_n_s_l, __pyx_k_l, sizeof(__pyx_k_l), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_math, __pyx_k_math, sizeof(__pyx_k_math), 0, 0, 1, 1},
   {&__pyx_n_s_max, __pyx_k_max, sizeof(__pyx_k_max), 0, 0, 1, 1},
   {&__pyx_n_s_max_workers, __pyx_k_max_workers, sizeof(__pyx_k_max_workers), 0, 0, 1, 1},
-  {&__pyx_n_s_most_common, __pyx_k_most_common, sizeof(__pyx_k_most_common), 0, 0, 1, 1},
   {&__pyx_n_s_multiprocessing, __pyx_k_multiprocessing, sizeof(__pyx_k_multiprocessing), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_networkx, __pyx_k_networkx, sizeof(__pyx_k_networkx), 0, 0, 1, 1},
-  {&__pyx_n_s_new_g, __pyx_k_new_g, sizeof(__pyx_k_new_g), 0, 0, 1, 1},
-  {&__pyx_n_s_node, __pyx_k_node, sizeof(__pyx_k_node), 0, 0, 1, 1},
   {&__pyx_n_s_nodelist, __pyx_k_nodelist, sizeof(__pyx_k_nodelist), 0, 0, 1, 1},
   {&__pyx_n_s_nodes, __pyx_k_nodes, sizeof(__pyx_k_nodes), 0, 0, 1, 1},
   {&__pyx_n_s_nx, __pyx_k_nx, sizeof(__pyx_k_nx), 0, 0, 1, 1},
@@ -4794,7 +4795,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_shortest_paths, __pyx_k_shortest_paths, sizeof(__pyx_k_shortest_paths), 0, 0, 1, 1},
   {&__pyx_n_s_shortest_simple_paths, __pyx_k_shortest_simple_paths, sizeof(__pyx_k_shortest_simple_paths), 0, 0, 1, 1},
   {&__pyx_n_s_shuffle, __pyx_k_shuffle, sizeof(__pyx_k_shuffle), 0, 0, 1, 1},
-  {&__pyx_n_s_social, __pyx_k_social, sizeof(__pyx_k_social), 0, 0, 1, 1},
   {&__pyx_n_s_submit, __pyx_k_submit, sizeof(__pyx_k_submit), 0, 0, 1, 1},
   {&__pyx_n_s_temp, __pyx_k_temp, sizeof(__pyx_k_temp), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
@@ -4822,7 +4822,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "edge_gravity.pyx":42
+  /* "edge_gravity/edge_gravity.pyx":42
  *     l = defaultdict(int)
  * 
  *     def get_shortest_paths(g, list nodelist, int k, weight):             # <<<<<<<<<<<<<<
@@ -4834,7 +4834,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple_);
   __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(4, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_edge_gravity_edge_gravity_pyx, __pyx_n_s_get_shortest_paths, 42, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 42, __pyx_L1_error)
 
-  /* "edge_gravity.pyx":95
+  /* "edge_gravity/edge_gravity.pyx":95
  *         k = 999_999
  * 
  *     def chunks(iterable, chunksize):             # <<<<<<<<<<<<<<
@@ -4846,7 +4846,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__3);
   __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_edge_gravity_edge_gravity_pyx, __pyx_n_s_chunks, 95, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 95, __pyx_L1_error)
 
-  /* "edge_gravity.pyx":107
+  /* "edge_gravity/edge_gravity.pyx":107
  *         yield temp
  * 
  *     with ProcessPoolExecutor(max_workers=cpu_count()) as exe:             # <<<<<<<<<<<<<<
@@ -4857,7 +4857,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "edge_gravity.pyx":29
+  /* "edge_gravity/edge_gravity.pyx":29
  *         return False
  * 
  * def worker(args):             # <<<<<<<<<<<<<<
@@ -4869,26 +4869,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__6);
   __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_edge_gravity_edge_gravity_pyx, __pyx_n_s_worker, 29, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 29, __pyx_L1_error)
 
-  /* "edge_gravity.pyx":68
+  /* "edge_gravity/edge_gravity.pyx":68
  *     return k_counter, l
  * 
  * def edge_gravity(g, k=None, weight=None):             # <<<<<<<<<<<<<<
  *     """
  *     Function that calculates Edge Gravity as described in:
  */
-  __pyx_tuple__8 = PyTuple_Pack(16, __pyx_n_s_g, __pyx_n_s_k, __pyx_n_s_weight, __pyx_n_s_chunks, __pyx_n_s_chunks, __pyx_n_s_exe, __pyx_n_s_futures, __pyx_n_s_nodes, __pyx_n_s_chunk, __pyx_n_s_results, __pyx_n_s_k_counters, __pyx_n_s_gravity_counters, __pyx_n_s_k_result, __pyx_n_s_r, __pyx_n_s_gravity_result, __pyx_n_s_future); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(17, __pyx_n_s_g, __pyx_n_s_k, __pyx_n_s_weight, __pyx_n_s_chunks, __pyx_n_s_chunks, __pyx_n_s_exe, __pyx_n_s_futures, __pyx_n_s_nodes, __pyx_n_s_chunk, __pyx_n_s_results, __pyx_n_s_k_counters, __pyx_n_s_gravity_counters, __pyx_n_s_k_result, __pyx_n_s_r, __pyx_n_s_gravity_result, __pyx_n_s_kstar_found, __pyx_n_s_future); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(3, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_edge_gravity_edge_gravity_pyx, __pyx_n_s_edge_gravity, 68, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 68, __pyx_L1_error)
-
-  /* "edge_gravity.pyx":146
- * 
- *     florentine_family = new_g
- *     print(edge_gravity(florentine_family, k=15).most_common(40))             # <<<<<<<<<<<<<<
- */
-  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_int_40); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 146, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__10);
-  __Pyx_GIVEREF(__pyx_tuple__10);
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(3, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_edge_gravity_edge_gravity_pyx, __pyx_n_s_edge_gravity, 68, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -4900,8 +4891,6 @@ static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error);
   __pyx_float__3 = PyFloat_FromDouble(.3); if (unlikely(!__pyx_float__3)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_15 = PyInt_FromLong(15); if (unlikely(!__pyx_int_15)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_40 = PyInt_FromLong(40); if (unlikely(!__pyx_int_40)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_999999 = PyInt_FromLong(999999L); if (unlikely(!__pyx_int_999999)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -4944,22 +4933,22 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_paths) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_paths.tp_print = 0;
+  __pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_paths.tp_dictoffset && __pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_paths.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_paths.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths.tp_dictoffset && __pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
-  __pyx_ptype_12edge_gravity___pyx_scope_struct__get_shortest_paths = &__pyx_type_12edge_gravity___pyx_scope_struct__get_shortest_paths;
-  if (PyType_Ready(&__pyx_type_12edge_gravity___pyx_scope_struct_1_chunks) < 0) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_ptype_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths = &__pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct__get_shortest_paths;
+  if (PyType_Ready(&__pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks) < 0) __PYX_ERR(0, 95, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_12edge_gravity___pyx_scope_struct_1_chunks.tp_print = 0;
+  __pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_12edge_gravity___pyx_scope_struct_1_chunks.tp_dictoffset && __pyx_type_12edge_gravity___pyx_scope_struct_1_chunks.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_12edge_gravity___pyx_scope_struct_1_chunks.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks.tp_dictoffset && __pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
-  __pyx_ptype_12edge_gravity___pyx_scope_struct_1_chunks = &__pyx_type_12edge_gravity___pyx_scope_struct_1_chunks;
+  __pyx_ptype_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks = &__pyx_type_12edge_gravity_12edge_gravity___pyx_scope_struct_1_chunks;
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5085,16 +5074,6 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_edge_gravity(PyObject *__pyx_pyini
 {
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
-  int __pyx_t_3;
-  PyObject *__pyx_t_4 = NULL;
-  Py_ssize_t __pyx_t_5;
-  PyObject *(*__pyx_t_6)(PyObject *);
-  PyObject *__pyx_t_7 = NULL;
-  PyObject *__pyx_t_8 = NULL;
-  PyObject *(*__pyx_t_9)(PyObject *);
-  PyObject *__pyx_t_10 = NULL;
-  int __pyx_t_11;
-  PyObject *__pyx_t_12 = NULL;
   __Pyx_RefNannyDeclarations
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
@@ -5171,14 +5150,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_edge_gravity) {
+  if (__pyx_module_is_main_edge_gravity__edge_gravity) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "edge_gravity")) {
-      if (unlikely(PyDict_SetItemString(modules, "edge_gravity", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "edge_gravity.edge_gravity")) {
+      if (unlikely(PyDict_SetItemString(modules, "edge_gravity.edge_gravity", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -5199,7 +5178,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "edge_gravity.pyx":1
+  /* "edge_gravity/edge_gravity.pyx":1
  * from collections import defaultdict, Counter             # <<<<<<<<<<<<<<
  * from concurrent.futures import ProcessPoolExecutor
  * from itertools import islice
@@ -5225,7 +5204,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "edge_gravity.pyx":2
+  /* "edge_gravity/edge_gravity.pyx":2
  * from collections import defaultdict, Counter
  * from concurrent.futures import ProcessPoolExecutor             # <<<<<<<<<<<<<<
  * from itertools import islice
@@ -5245,7 +5224,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "edge_gravity.pyx":3
+  /* "edge_gravity/edge_gravity.pyx":3
  * from collections import defaultdict, Counter
  * from concurrent.futures import ProcessPoolExecutor
  * from itertools import islice             # <<<<<<<<<<<<<<
@@ -5266,7 +5245,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "edge_gravity.pyx":4
+  /* "edge_gravity/edge_gravity.pyx":4
  * from concurrent.futures import ProcessPoolExecutor
  * from itertools import islice
  * import math             # <<<<<<<<<<<<<<
@@ -5278,7 +5257,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_math, __pyx_t_2) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "edge_gravity.pyx":5
+  /* "edge_gravity/edge_gravity.pyx":5
  * from itertools import islice
  * import math
  * from multiprocessing import cpu_count             # <<<<<<<<<<<<<<
@@ -5299,7 +5278,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "edge_gravity.pyx":6
+  /* "edge_gravity/edge_gravity.pyx":6
  * import math
  * from multiprocessing import cpu_count
  * import random             # <<<<<<<<<<<<<<
@@ -5311,7 +5290,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_random, __pyx_t_1) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "edge_gravity.pyx":8
+  /* "edge_gravity/edge_gravity.pyx":8
  * import random
  * 
  * import networkx as nx             # <<<<<<<<<<<<<<
@@ -5323,519 +5302,39 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_nx, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "edge_gravity.pyx":29
+  /* "edge_gravity/edge_gravity.pyx":29
  *         return False
  * 
  * def worker(args):             # <<<<<<<<<<<<<<
  *     """
  *     does the heavy lifting - every process gets a worker and every worker a subset of#
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12edge_gravity_1worker, NULL, __pyx_n_s_edge_gravity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12edge_gravity_12edge_gravity_1worker, NULL, __pyx_n_s_edge_gravity_edge_gravity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_worker, __pyx_t_1) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "edge_gravity.pyx":68
+  /* "edge_gravity/edge_gravity.pyx":68
  *     return k_counter, l
  * 
  * def edge_gravity(g, k=None, weight=None):             # <<<<<<<<<<<<<<
  *     """
  *     Function that calculates Edge Gravity as described in:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12edge_gravity_3edge_gravity, NULL, __pyx_n_s_edge_gravity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12edge_gravity_12edge_gravity_3edge_gravity, NULL, __pyx_n_s_edge_gravity_edge_gravity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_edge_gravity, __pyx_t_1) < 0) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "edge_gravity.pyx":134
- *     return gravity_result
- * 
- * if __name__ == "__main__":             # <<<<<<<<<<<<<<
- *     florentine_family = nx.generators.social.florentine_families_graph()
- * 
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_n_s_main, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 134, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__pyx_t_3) {
-
-    /* "edge_gravity.pyx":135
- * 
- * if __name__ == "__main__":
- *     florentine_family = nx.generators.social.florentine_families_graph()             # <<<<<<<<<<<<<<
- * 
- *     new_g = nx.DiGraph()
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_nx); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_generators); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_social); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_florentine_families_graph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_florentine_family, __pyx_t_1) < 0) __PYX_ERR(0, 135, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-    /* "edge_gravity.pyx":137
- *     florentine_family = nx.generators.social.florentine_families_graph()
- * 
- *     new_g = nx.DiGraph()             # <<<<<<<<<<<<<<
- *     for node in florentine_family.nodes():
- *         new_g.add_node(node)
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_nx); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_DiGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_new_g, __pyx_t_1) < 0) __PYX_ERR(0, 137, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-    /* "edge_gravity.pyx":138
- * 
- *     new_g = nx.DiGraph()
- *     for node in florentine_family.nodes():             # <<<<<<<<<<<<<<
- *         new_g.add_node(node)
- * 
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_florentine_family); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_nodes); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 138, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_4);
-      if (likely(__pyx_t_2)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-        __Pyx_INCREF(__pyx_t_2);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_4, function);
-      }
-    }
-    __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
-      __pyx_t_4 = __pyx_t_1; __Pyx_INCREF(__pyx_t_4); __pyx_t_5 = 0;
-      __pyx_t_6 = NULL;
-    } else {
-      __pyx_t_5 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 138, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_6 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 138, __pyx_L1_error)
-    }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    for (;;) {
-      if (likely(!__pyx_t_6)) {
-        if (likely(PyList_CheckExact(__pyx_t_4))) {
-          if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_4)) break;
-          #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 138, __pyx_L1_error)
-          #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_1);
-          #endif
-        } else {
-          if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
-          #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 138, __pyx_L1_error)
-          #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_1);
-          #endif
-        }
-      } else {
-        __pyx_t_1 = __pyx_t_6(__pyx_t_4);
-        if (unlikely(!__pyx_t_1)) {
-          PyObject* exc_type = PyErr_Occurred();
-          if (exc_type) {
-            if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 138, __pyx_L1_error)
-          }
-          break;
-        }
-        __Pyx_GOTREF(__pyx_t_1);
-      }
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_node, __pyx_t_1) < 0) __PYX_ERR(0, 138, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-      /* "edge_gravity.pyx":139
- *     new_g = nx.DiGraph()
- *     for node in florentine_family.nodes():
- *         new_g.add_node(node)             # <<<<<<<<<<<<<<
- * 
- *     for u, v in florentine_family.edges():
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_new_g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_add_node); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 139, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_7);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_node); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_8 = NULL;
-      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_7))) {
-        __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_7);
-        if (likely(__pyx_t_8)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-          __Pyx_INCREF(__pyx_t_8);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_7, function);
-        }
-      }
-      __pyx_t_1 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_8, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_2);
-      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-      /* "edge_gravity.pyx":138
- * 
- *     new_g = nx.DiGraph()
- *     for node in florentine_family.nodes():             # <<<<<<<<<<<<<<
- *         new_g.add_node(node)
- * 
- */
-    }
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-    /* "edge_gravity.pyx":141
- *         new_g.add_node(node)
- * 
- *     for u, v in florentine_family.edges():             # <<<<<<<<<<<<<<
- *         new_g.add_edge(u,v)
- *         new_g.add_edge(v,u)
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_florentine_family); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_edges); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 141, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_7))) {
-      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_7);
-      if (likely(__pyx_t_1)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-        __Pyx_INCREF(__pyx_t_1);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_7, function);
-      }
-    }
-    __pyx_t_4 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
-    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 141, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (likely(PyList_CheckExact(__pyx_t_4)) || PyTuple_CheckExact(__pyx_t_4)) {
-      __pyx_t_7 = __pyx_t_4; __Pyx_INCREF(__pyx_t_7); __pyx_t_5 = 0;
-      __pyx_t_6 = NULL;
-    } else {
-      __pyx_t_5 = -1; __pyx_t_7 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 141, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_6 = Py_TYPE(__pyx_t_7)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 141, __pyx_L1_error)
-    }
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    for (;;) {
-      if (likely(!__pyx_t_6)) {
-        if (likely(PyList_CheckExact(__pyx_t_7))) {
-          if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_7)) break;
-          #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_4 = PyList_GET_ITEM(__pyx_t_7, __pyx_t_5); __Pyx_INCREF(__pyx_t_4); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 141, __pyx_L1_error)
-          #else
-          __pyx_t_4 = PySequence_ITEM(__pyx_t_7, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 141, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_4);
-          #endif
-        } else {
-          if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_7)) break;
-          #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_7, __pyx_t_5); __Pyx_INCREF(__pyx_t_4); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 141, __pyx_L1_error)
-          #else
-          __pyx_t_4 = PySequence_ITEM(__pyx_t_7, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 141, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_4);
-          #endif
-        }
-      } else {
-        __pyx_t_4 = __pyx_t_6(__pyx_t_7);
-        if (unlikely(!__pyx_t_4)) {
-          PyObject* exc_type = PyErr_Occurred();
-          if (exc_type) {
-            if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 141, __pyx_L1_error)
-          }
-          break;
-        }
-        __Pyx_GOTREF(__pyx_t_4);
-      }
-      if ((likely(PyTuple_CheckExact(__pyx_t_4))) || (PyList_CheckExact(__pyx_t_4))) {
-        PyObject* sequence = __pyx_t_4;
-        Py_ssize_t size = __Pyx_PySequence_SIZE(sequence);
-        if (unlikely(size != 2)) {
-          if (size > 2) __Pyx_RaiseTooManyValuesError(2);
-          else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 141, __pyx_L1_error)
-        }
-        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        if (likely(PyTuple_CheckExact(sequence))) {
-          __pyx_t_1 = PyTuple_GET_ITEM(sequence, 0); 
-          __pyx_t_2 = PyTuple_GET_ITEM(sequence, 1); 
-        } else {
-          __pyx_t_1 = PyList_GET_ITEM(sequence, 0); 
-          __pyx_t_2 = PyList_GET_ITEM(sequence, 1); 
-        }
-        __Pyx_INCREF(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_2);
-        #else
-        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        #endif
-        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      } else {
-        Py_ssize_t index = -1;
-        __pyx_t_8 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 141, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_8);
-        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_9 = Py_TYPE(__pyx_t_8)->tp_iternext;
-        index = 0; __pyx_t_1 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_1)) goto __pyx_L7_unpacking_failed;
-        __Pyx_GOTREF(__pyx_t_1);
-        index = 1; __pyx_t_2 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_2)) goto __pyx_L7_unpacking_failed;
-        __Pyx_GOTREF(__pyx_t_2);
-        if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 2) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
-        __pyx_t_9 = NULL;
-        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-        goto __pyx_L8_unpacking_done;
-        __pyx_L7_unpacking_failed:;
-        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-        __pyx_t_9 = NULL;
-        if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-        __PYX_ERR(0, 141, __pyx_L1_error)
-        __pyx_L8_unpacking_done:;
-      }
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_u, __pyx_t_1) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_v, __pyx_t_2) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-      /* "edge_gravity.pyx":142
- * 
- *     for u, v in florentine_family.edges():
- *         new_g.add_edge(u,v)             # <<<<<<<<<<<<<<
- *         new_g.add_edge(v,u)
- * 
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_new_g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_add_edge); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_u); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_v); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 142, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_10 = NULL;
-      __pyx_t_11 = 0;
-      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
-        __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_1);
-        if (likely(__pyx_t_10)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-          __Pyx_INCREF(__pyx_t_10);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_1, function);
-          __pyx_t_11 = 1;
-        }
-      }
-      #if CYTHON_FAST_PYCALL
-      if (PyFunction_Check(__pyx_t_1)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_2, __pyx_t_8};
-        __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 142, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-        __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      } else
-      #endif
-      #if CYTHON_FAST_PYCCALL
-      if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_2, __pyx_t_8};
-        __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 142, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-        __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      } else
-      #endif
-      {
-        __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 142, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_12);
-        if (__pyx_t_10) {
-          __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_10); __pyx_t_10 = NULL;
-        }
-        __Pyx_GIVEREF(__pyx_t_2);
-        PyTuple_SET_ITEM(__pyx_t_12, 0+__pyx_t_11, __pyx_t_2);
-        __Pyx_GIVEREF(__pyx_t_8);
-        PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_11, __pyx_t_8);
-        __pyx_t_2 = 0;
-        __pyx_t_8 = 0;
-        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_12, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 142, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      }
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-      /* "edge_gravity.pyx":143
- *     for u, v in florentine_family.edges():
- *         new_g.add_edge(u,v)
- *         new_g.add_edge(v,u)             # <<<<<<<<<<<<<<
- * 
- *     florentine_family = new_g
- */
-      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_new_g); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_add_edge); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 143, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_12);
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_u); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 143, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_2 = NULL;
-      __pyx_t_11 = 0;
-      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_12))) {
-        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_12);
-        if (likely(__pyx_t_2)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_12);
-          __Pyx_INCREF(__pyx_t_2);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_12, function);
-          __pyx_t_11 = 1;
-        }
-      }
-      #if CYTHON_FAST_PYCALL
-      if (PyFunction_Check(__pyx_t_12)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_t_1, __pyx_t_8};
-        __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 143, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      } else
-      #endif
-      #if CYTHON_FAST_PYCCALL
-      if (__Pyx_PyFastCFunction_Check(__pyx_t_12)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_t_1, __pyx_t_8};
-        __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 143, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      } else
-      #endif
-      {
-        __pyx_t_10 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 143, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_10);
-        if (__pyx_t_2) {
-          __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_2); __pyx_t_2 = NULL;
-        }
-        __Pyx_GIVEREF(__pyx_t_1);
-        PyTuple_SET_ITEM(__pyx_t_10, 0+__pyx_t_11, __pyx_t_1);
-        __Pyx_GIVEREF(__pyx_t_8);
-        PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_11, __pyx_t_8);
-        __pyx_t_1 = 0;
-        __pyx_t_8 = 0;
-        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 143, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-      }
-      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-      /* "edge_gravity.pyx":141
- *         new_g.add_node(node)
- * 
- *     for u, v in florentine_family.edges():             # <<<<<<<<<<<<<<
- *         new_g.add_edge(u,v)
- *         new_g.add_edge(v,u)
- */
-    }
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-
-    /* "edge_gravity.pyx":145
- *         new_g.add_edge(v,u)
- * 
- *     florentine_family = new_g             # <<<<<<<<<<<<<<
- *     print(edge_gravity(florentine_family, k=15).most_common(40))
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_new_g); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 145, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_florentine_family, __pyx_t_7) < 0) __PYX_ERR(0, 145, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-
-    /* "edge_gravity.pyx":146
- * 
- *     florentine_family = new_g
- *     print(edge_gravity(florentine_family, k=15).most_common(40))             # <<<<<<<<<<<<<<
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_edge_gravity); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 146, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_florentine_family); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 146, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = PyTuple_New(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 146, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_12);
-    __Pyx_GIVEREF(__pyx_t_4);
-    PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_4);
-    __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 146, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_k, __pyx_int_15) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
-    __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_12, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 146, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_10);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_most_common); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 146, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 146, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_10);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (__Pyx_PrintOne(0, __pyx_t_10) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-
-    /* "edge_gravity.pyx":134
- *     return gravity_result
- * 
- * if __name__ == "__main__":             # <<<<<<<<<<<<<<
- *     florentine_family = nx.generators.social.florentine_families_graph()
- * 
- */
-  }
-
-  /* "edge_gravity.pyx":1
+  /* "edge_gravity/edge_gravity.pyx":1
  * from collections import defaultdict, Counter             # <<<<<<<<<<<<<<
  * from concurrent.futures import ProcessPoolExecutor
  * from itertools import islice
  */
-  __pyx_t_10 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_10);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_10) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /*--- Wrapped vars code ---*/
 
@@ -5843,18 +5342,13 @@ if (!__Pyx_RefNanny) {
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_XDECREF(__pyx_t_12);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init edge_gravity", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init edge_gravity.edge_gravity", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init edge_gravity");
+    PyErr_SetString(PyExc_ImportError, "init edge_gravity.edge_gravity");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -8201,6 +7695,90 @@ bad:
     Py_XDECREF(py_frame);
 }
 
+/* CIntToPy */
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
+    const long neg_one = (long) ((long) 0 - (long) 1), const_zero = (long) 0;
+    const int is_unsigned = neg_one > const_zero;
+    if (is_unsigned) {
+        if (sizeof(long) < sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(long) <= sizeof(unsigned long)) {
+            return PyLong_FromUnsignedLong((unsigned long) value);
+#ifdef HAVE_LONG_LONG
+        } else if (sizeof(long) <= sizeof(unsigned PY_LONG_LONG)) {
+            return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
+#endif
+        }
+    } else {
+        if (sizeof(long) <= sizeof(long)) {
+            return PyInt_FromLong((long) value);
+#ifdef HAVE_LONG_LONG
+        } else if (sizeof(long) <= sizeof(PY_LONG_LONG)) {
+            return PyLong_FromLongLong((PY_LONG_LONG) value);
+#endif
+        }
+    }
+    {
+        int one = 1; int little = (int)*(unsigned char *)&one;
+        unsigned char *bytes = (unsigned char *)&value;
+        return _PyLong_FromByteArray(bytes, sizeof(long),
+                                     little, !is_unsigned);
+    }
+}
+
+/* CIntFromPyVerify */
+#define __PYX_VERIFY_RETURN_INT(target_type, func_type, func_value)\
+    __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 0)
+#define __PYX_VERIFY_RETURN_INT_EXC(target_type, func_type, func_value)\
+    __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 1)
+#define __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, exc)\
+    {\
+        func_type value = func_value;\
+        if (sizeof(target_type) < sizeof(func_type)) {\
+            if (unlikely(value != (func_type) (target_type) value)) {\
+                func_type zero = 0;\
+                if (exc && unlikely(value == (func_type)-1 && PyErr_Occurred()))\
+                    return (target_type) -1;\
+                if (is_unsigned && unlikely(value < zero))\
+                    goto raise_neg_overflow;\
+                else\
+                    goto raise_overflow;\
+            }\
+        }\
+        return (target_type) value;\
+    }
+
+/* CIntToPy */
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
+    const int neg_one = (int) ((int) 0 - (int) 1), const_zero = (int) 0;
+    const int is_unsigned = neg_one > const_zero;
+    if (is_unsigned) {
+        if (sizeof(int) < sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(int) <= sizeof(unsigned long)) {
+            return PyLong_FromUnsignedLong((unsigned long) value);
+#ifdef HAVE_LONG_LONG
+        } else if (sizeof(int) <= sizeof(unsigned PY_LONG_LONG)) {
+            return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
+#endif
+        }
+    } else {
+        if (sizeof(int) <= sizeof(long)) {
+            return PyInt_FromLong((long) value);
+#ifdef HAVE_LONG_LONG
+        } else if (sizeof(int) <= sizeof(PY_LONG_LONG)) {
+            return PyLong_FromLongLong((PY_LONG_LONG) value);
+#endif
+        }
+    }
+    {
+        int one = 1; int little = (int)*(unsigned char *)&one;
+        unsigned char *bytes = (unsigned char *)&value;
+        return _PyLong_FromByteArray(bytes, sizeof(int),
+                                     little, !is_unsigned);
+    }
+}
+
 /* Print */
 #if !CYTHON_COMPILING_IN_PYPY && PY_MAJOR_VERSION < 3
 static PyObject *__Pyx_GetStdout(void) {
@@ -8304,127 +7882,6 @@ bad:
     if (kwargs != __pyx_print_kwargs)
         Py_XDECREF(kwargs);
     return -1;
-}
-#endif
-
-/* CIntToPy */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
-    const long neg_one = (long) ((long) 0 - (long) 1), const_zero = (long) 0;
-    const int is_unsigned = neg_one > const_zero;
-    if (is_unsigned) {
-        if (sizeof(long) < sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(long) <= sizeof(unsigned long)) {
-            return PyLong_FromUnsignedLong((unsigned long) value);
-#ifdef HAVE_LONG_LONG
-        } else if (sizeof(long) <= sizeof(unsigned PY_LONG_LONG)) {
-            return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
-#endif
-        }
-    } else {
-        if (sizeof(long) <= sizeof(long)) {
-            return PyInt_FromLong((long) value);
-#ifdef HAVE_LONG_LONG
-        } else if (sizeof(long) <= sizeof(PY_LONG_LONG)) {
-            return PyLong_FromLongLong((PY_LONG_LONG) value);
-#endif
-        }
-    }
-    {
-        int one = 1; int little = (int)*(unsigned char *)&one;
-        unsigned char *bytes = (unsigned char *)&value;
-        return _PyLong_FromByteArray(bytes, sizeof(long),
-                                     little, !is_unsigned);
-    }
-}
-
-/* CIntFromPyVerify */
-#define __PYX_VERIFY_RETURN_INT(target_type, func_type, func_value)\
-    __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 0)
-#define __PYX_VERIFY_RETURN_INT_EXC(target_type, func_type, func_value)\
-    __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 1)
-#define __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, exc)\
-    {\
-        func_type value = func_value;\
-        if (sizeof(target_type) < sizeof(func_type)) {\
-            if (unlikely(value != (func_type) (target_type) value)) {\
-                func_type zero = 0;\
-                if (exc && unlikely(value == (func_type)-1 && PyErr_Occurred()))\
-                    return (target_type) -1;\
-                if (is_unsigned && unlikely(value < zero))\
-                    goto raise_neg_overflow;\
-                else\
-                    goto raise_overflow;\
-            }\
-        }\
-        return (target_type) value;\
-    }
-
-/* CIntToPy */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
-    const int neg_one = (int) ((int) 0 - (int) 1), const_zero = (int) 0;
-    const int is_unsigned = neg_one > const_zero;
-    if (is_unsigned) {
-        if (sizeof(int) < sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(int) <= sizeof(unsigned long)) {
-            return PyLong_FromUnsignedLong((unsigned long) value);
-#ifdef HAVE_LONG_LONG
-        } else if (sizeof(int) <= sizeof(unsigned PY_LONG_LONG)) {
-            return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
-#endif
-        }
-    } else {
-        if (sizeof(int) <= sizeof(long)) {
-            return PyInt_FromLong((long) value);
-#ifdef HAVE_LONG_LONG
-        } else if (sizeof(int) <= sizeof(PY_LONG_LONG)) {
-            return PyLong_FromLongLong((PY_LONG_LONG) value);
-#endif
-        }
-    }
-    {
-        int one = 1; int little = (int)*(unsigned char *)&one;
-        unsigned char *bytes = (unsigned char *)&value;
-        return _PyLong_FromByteArray(bytes, sizeof(int),
-                                     little, !is_unsigned);
-    }
-}
-
-/* PrintOne */
-#if !CYTHON_COMPILING_IN_PYPY && PY_MAJOR_VERSION < 3
-static int __Pyx_PrintOne(PyObject* f, PyObject *o) {
-    if (!f) {
-        if (!(f = __Pyx_GetStdout()))
-            return -1;
-    }
-    Py_INCREF(f);
-    if (PyFile_SoftSpace(f, 0)) {
-        if (PyFile_WriteString(" ", f) < 0)
-            goto error;
-    }
-    if (PyFile_WriteObject(o, f, Py_PRINT_RAW) < 0)
-        goto error;
-    if (PyFile_WriteString("\n", f) < 0)
-        goto error;
-    Py_DECREF(f);
-    return 0;
-error:
-    Py_DECREF(f);
-    return -1;
-    /* the line below is just to avoid C compiler
-     * warnings about unused functions */
-    return __Pyx_Print(f, NULL, 0);
-}
-#else
-static int __Pyx_PrintOne(PyObject* stream, PyObject *o) {
-    int res;
-    PyObject* arg_tuple = PyTuple_Pack(1, o);
-    if (unlikely(!arg_tuple))
-        return -1;
-    res = __Pyx_Print(stream, arg_tuple, 1);
-    Py_DECREF(arg_tuple);
-    return res;
 }
 #endif
 
@@ -8805,6 +8262,43 @@ raise_neg_overflow:
         "can't convert negative value to int");
     return (int) -1;
 }
+
+/* PrintOne */
+#if !CYTHON_COMPILING_IN_PYPY && PY_MAJOR_VERSION < 3
+static int __Pyx_PrintOne(PyObject* f, PyObject *o) {
+    if (!f) {
+        if (!(f = __Pyx_GetStdout()))
+            return -1;
+    }
+    Py_INCREF(f);
+    if (PyFile_SoftSpace(f, 0)) {
+        if (PyFile_WriteString(" ", f) < 0)
+            goto error;
+    }
+    if (PyFile_WriteObject(o, f, Py_PRINT_RAW) < 0)
+        goto error;
+    if (PyFile_WriteString("\n", f) < 0)
+        goto error;
+    Py_DECREF(f);
+    return 0;
+error:
+    Py_DECREF(f);
+    return -1;
+    /* the line below is just to avoid C compiler
+     * warnings about unused functions */
+    return __Pyx_Print(f, NULL, 0);
+}
+#else
+static int __Pyx_PrintOne(PyObject* stream, PyObject *o) {
+    int res;
+    PyObject* arg_tuple = PyTuple_Pack(1, o);
+    if (unlikely(!arg_tuple))
+        return -1;
+    res = __Pyx_Print(stream, arg_tuple, 1);
+    Py_DECREF(arg_tuple);
+    return res;
+}
+#endif
 
 /* RaiseException */
 #if PY_MAJOR_VERSION < 3
