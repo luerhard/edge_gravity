@@ -5,7 +5,7 @@ from Cython.Build import cythonize
 
 setup(
     name="edge_gravity",
-    version="0.0.2",
+    version="0.0.3",
     author="Lukas Erhard",
     author_email="luerhard@googlemail.com",
     include_package_data=True,
