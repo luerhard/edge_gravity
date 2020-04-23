@@ -3,12 +3,6 @@ from setuptools.extension import Extension
 from pathlib import Path
 from Cython.Build import cythonize
 
-
-extension = Extension(name="edge_gravity.edge_gravity",
-                      sources=["edge_gravity/edge_gravity.pyx"])
-
-extension = cythonize(extension)
-
 setup(
     name="edge_gravity",
     version="0.0.2",
@@ -22,7 +16,7 @@ setup(
     long_description=Path("README.md").read_text(),
     long_description_content_type="text/markdown",
     packages=["edge_gravity"],
-    install_requires=["networkx", "cython"],
+    install_requires=["networkx"],
     python_requires=">=3.6",
-    ext_modules=extension
+    ext_modules=cythonize("edge_gravity/edge_gravity.pyx"),
 )

@@ -1,3 +1,3 @@
-"""calculate edge gravity for networkx-Graphs"""
+"Docstring yay"
 
 __version__ = "0.0.2"
