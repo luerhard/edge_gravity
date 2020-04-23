@@ -1,25 +1,13 @@
 from setuptools import setup
 from setuptools.extension import Extension
 from pathlib import Path
+from Cython.Build import cythonize
 
-USE_CYTHON = "auto"
-
-if USE_CYTHON:
-    try:
-        from Cython.Build import cythonize
-    except ImportError:
-        if USE_CYTHON == 'auto':
-            USE_CYTHON = False
-        else:
-            raise
-
-ext = '.pyx' if USE_CYTHON else '.c'
 
 extension = Extension(name="edge_gravity.edge_gravity",
-                      sources=["edge_gravity/edge_gravity" + ext])
+                      sources=["edge_gravity/edge_gravity.pyx"])
 
-if USE_CYTHON:
-    extensions = cythonize(extension)
+extension = cythonize(extension)
 
 setup(
     name="edge_gravity",
@@ -34,7 +22,7 @@ setup(
     long_description=Path("README.md").read_text(),
     long_description_content_type="text/markdown",
     packages=["edge_gravity"],
-    install_requires=["networkx"],
+    install_requires=["networkx", "cython"],
     python_requires=">=3.6",
-    ext_modules=extensions
+    ext_modules=extension
 )

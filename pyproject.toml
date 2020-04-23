@@ -1,5 +1,7 @@
 [build-system]
-requires = ["flit_core >=2,<4"]
+requires = ["flit_core >=2,<4",
+            "setuptools",
+            "Cython"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
@@ -10,4 +12,3 @@ description-file = "README.md"
 home-page = "https://github.com/luerhard/edge_gravity/"
 classifiers = ["License :: OSI Approved :: MIT License"]
 requires = ["networkx"]
-
